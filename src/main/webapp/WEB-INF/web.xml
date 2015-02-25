@@ -9,6 +9,15 @@
 		<param-name>resteasy.scan</param-name>
 		<param-value>true</param-value>
 	</context-param>
+        
+        <context-param>
+            <param-name>resteasy.resources</param-name>
+            <param-value>com.gpii.restful.RBMM_WebService</param-value>
+        </context-param>
+        <context-param>
+            <param-name>javax.ws.rs.core.Application</param-name>
+            <param-value>com.gpii.restful.RBMM_WebService_Config</param-value>
+        </context-param>
 	
 	<servlet>
 		<servlet-name>resteasy-servlet</servlet-name>

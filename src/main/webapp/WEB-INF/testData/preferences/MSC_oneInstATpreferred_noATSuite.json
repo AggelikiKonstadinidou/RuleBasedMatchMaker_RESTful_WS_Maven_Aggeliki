@@ -1,0 +1,92 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/screenReaderTTSEnabled": true,
+                    "http://registry.gpii.net/common/speechRate": 300,
+                    "http://registry.gpii.net/common/magnifierEnabled": true
+                },
+                "metadata": [
+                    {
+                        "type": "required",
+                        "scope": [
+                            "http://registry.gpii.net/common/screenReaderTTSEnabled"
+                        ],
+                        "value": 1024
+                    },
+                    {
+                        "type": "priority",
+                        "scope": [
+                            "http://registry.gpii.net/applications/org.nvda-project" , 
+							"http://registry.gpii.net/applications/com.microsoft.windows.magnifier",
+							"http://registry.gpii.net/applications/com.yourdolphin.supernova-as" 
+							 
+							
+                        ],
+                        "value": 1024
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "win32",
+            "version": "5.0.0"
+        },
+        "solutions": [
+            {
+                "id": "com.microsoft.windows.desktop"
+            },
+            {
+                "id": "com.microsoft.windows.magnifier"
+            },
+            {
+                "id": "com.microsoft.windows.onscreenKeyboard"
+            },
+            {
+                "id": "org.nvda-project"
+            },
+            {
+                "id": "trace.easyOne.communicator.windows"
+            },
+            {
+                "id": "trace.easyOne.communicator.linux"
+            },
+            {
+                "id": "trace.easyOne.sudan.windows"
+            },
+            {
+                "id": "trace.easyOne.sudan.linux"
+            },
+            {
+                "id": "webinsight.webAnywhere.windows"
+            },
+            {
+                "id": "com.texthelp.readWriteGold"
+            },
+            {
+                "id": "net.opendirective.maavis"
+            },
+            {
+                "id": "com.microsoft.windows.highContrast"
+            },
+            {
+                "id": "com.microsoft.windows.mouseTracking"
+            },
+            {
+                "id": "com.microsoft.windows.cursors"
+            },
+			{
+				"id": "com.freedomscientific.jaws"
+			}            
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}

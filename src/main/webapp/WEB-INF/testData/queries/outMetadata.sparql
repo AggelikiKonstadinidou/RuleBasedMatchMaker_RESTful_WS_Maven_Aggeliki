@@ -1,0 +1,24 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX c4a:  <http://rbmm.org/schemas/cloud4all/0.1/>
+SELECT DISTINCT 
+	?type
+	?feedbackType
+	(str(?c) as ?contextID)
+	(str(?msgType) as ?metaType)
+	(str(?scope) as ?metaScope)
+	(str(?lang) as ?msgLang)
+	(str(?text) as ?msgText)
+WHERE
+{
+	?if rdf:type c4a:InferredConfiguration.
+	?if c4a:id ?c.
+	?if c4a:hasMetadata ?meta.
+	?meta rdf:type ?type.
+	?meta c4a:messageType ?msgType.
+	?meta c4a:scope ?scope.
+	?meta c4a:refersTo ??feedbackType.
+	?feedbackType c4a:messages ?msgs.
+	?msgs c4a:language ?lang.
+	?msgs c4a:text ?text.
+} ORDER BY DESC(?c)

@@ -1,0 +1,19 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+[AddPreferredSolutionToConfiguration:
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)
+	(?if c4a:refersTo ?config)			
+	(?if c4a:hasMetadata ?meta)
+	(?meta c4a:type "priority")
+	(?meta c4a:scope ?prefsol)
+	(?config c4a:refersTo ?sol)		
+	(?sol c4a:id ?sol_id)
+	equal(?prefsol, ?sol_id)
+	->
+	(?config c4a:solPreferred "true")
+	print('**********PREFDERRED SOLUTION **************')
+	print('CONTEXT: ' ?if_id)
+	print('SOLUTION: ' ?sol_id)
+]

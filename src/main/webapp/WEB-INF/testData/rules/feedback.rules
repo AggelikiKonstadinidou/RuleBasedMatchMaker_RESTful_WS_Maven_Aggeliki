@@ -1,0 +1,27 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+[HelpForAts:
+	(?config rdf:type c4a:Configuration)
+	(?config c4a:isActive "true")
+	(?config c4a:refersTo ?s)
+	(?s c4a:class ?c)
+	(?s c4a:name ?s_name)
+	(?c rdf:type c4a:AssistiveTechnology)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)
+	(?if c4a:refersTo ?config)
+	 
+	noValue(?config c4a:solPreferred "true")
+	makeSkolem(?newMetaData, ?if, ?s)	
+	->
+	(?newMetaData rdf:type c4a:Metadata)
+	(?newMetaData c4a:scope ?s_name)
+	(?newMetaData c4a:messageType "helpMessage")
+	(?newMetaData c4a:refersTo c4a:NoPrefferdAT)
+	(?if c4a:hasMetadata ?newMetaData)
+	print('***********FeedbackForAts******************')
+	print('CONTEXT: ' ?if_id)
+	print('HELP FOR SOLUTION: ' ?s)	
+]

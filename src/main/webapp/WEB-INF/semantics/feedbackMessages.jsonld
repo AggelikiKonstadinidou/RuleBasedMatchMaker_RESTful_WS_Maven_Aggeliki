@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "c4a": "http://rbmm.org/schemas/cloud4all/0.1/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "c4a:NoPrefferdAT",
+            "@type": "c4a:Message",
+            "c4a:messages": [
+                {
+                    "c4a:language": "en",
+                    "c4a:text": "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+                },
+                {
+                    "c4a:language": "de",
+                    "c4a:text": "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+                },
+                {
+                    "c4a:language": "gr",
+                    "c4a:text": "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+                }
+            ]
+        }
+    ]
+}

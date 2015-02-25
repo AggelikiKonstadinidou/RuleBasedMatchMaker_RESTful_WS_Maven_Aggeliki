@@ -1,0 +1,59 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+					 "http://registry.gpii.net/applications/com.texthelp.readWriteGold": {
+							"ApplicationSettings.AppBar.Width.$t": 788,
+							"ApplicationSettings.AppBar.Width.$t": 1072,
+							"ApplicationSettings.AppBar.ShowText.$t": true,
+							"ApplicationSettings.AppBar.optToolbarShowText.$t": true,
+							"ApplicationSettings.AppBar.LargeIcons.$t": true,
+							"ApplicationSettings.AppBar.optToolbarLargeIcons.$t": true,
+							"ApplicationSettings.Speech.optSAPI5Speed.$t": 50,
+							"ApplicationSettings.Speech.optAutoUseScreenReading.$t": false
+					},
+					"http://registry.gpii.net/common/matchMakerType": "RuleBased"					
+                }
+            }
+        } 	 	
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "android",
+            "version": "3.0.31-693204"
+        },
+        "solutions": [
+            {
+                "id": "com.microsoft.windows.onscreenKeyboard"
+            },
+            {
+                "id": "com.microsoft.windows.magnifier"
+            },
+			{
+				"id": "com.microsoft.windows.displaySettings"
+			},			
+            {
+                "id": "com.microsoft.windows.highContrast"
+            },
+            {
+                "id": "org.nvda-project"
+            },			
+            {
+                "id": "com.yourdolphin.supernova-as"
+            },
+            {
+                "id": "com.texthelp.readWriteGold"
+            }		
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [
+        "gpii-default",
+        "nighttime-at-home"
+    ],
+    "inverseCapabilities": {},
+    "rematch": {}
+}

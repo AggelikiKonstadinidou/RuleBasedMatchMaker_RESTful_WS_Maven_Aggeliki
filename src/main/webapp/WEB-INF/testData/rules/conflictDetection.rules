@@ -1,0 +1,53 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+		
+// DETECTION OF MULTIPLE SOLUTION CONFLICTS FOR ASSISTIVE TECHNOLOGIES 
+
+	[DetectMultipleSolutionConflict: 
+	(?config_x c4a:refersTo ?s1)
+	(?config_y c4a:refersTo ?s2)
+	
+	(?config_x rdf:type c4a:Configuration)
+	(?config_y rdf:type c4a:Configuration)
+	
+	notEqual(?config_x, ?config_y)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)
+	(?if c4a:refersTo ?config_x)
+	(?if c4a:refersTo ?config_y)
+	
+	(?s1 c4a:class ?c) 
+	(?s2 c4a:class ?c)
+	(?c rdf:type c4a:AssistiveTechnology)
+	
+	makeSkolem(?newConflict, ?if, ?c)
+	->
+	(?newConflict rdf:type c4a:Conflict)
+	(?newConflict c4a:name "MultipleSolutionConflict")
+	(?newConflict c4a:refersTo ?config_x)
+	(?newConflict c4a:refersTo ?config_y)
+	(?newConflict c4a:class ?c)
+	
+	(?config_x c4a:hasConflict ?newConflict)
+	(?config_y c4a:hasConflict ?newConflict)
+	
+	print('************ CONFLICT DETECTION ****************')
+	print('CONFLICT: Multiple Solution Conflict')
+	print('CONFLICT CLASS: Multiple Assistive Technologies')
+	print('TYPE: ' ?c)
+	print('CONTEXT' ?if_id)
+	print('AFFECTED SOLUTION: ' ?s1)
+	]
+	
+	// HACK - Google Chrome Browser plugins schall not be activated per default
+	[DeactivateGoogleChrome:
+	(?if c4a:refersTo ?config_x)
+	(?config_x rdf:type c4a:Configuration)
+	(?config_x c4a:isActive "true")	
+	(?config_x c4a:refersTo http://registry.gpii.net/applications/org.chrome.cloud4chrome)
+	->
+	drop(2)
+	(?config_x c4a:isActive "false")
+	print('************ HACK GOOGLE CHROME HAS BEEN DEACTIVATED ****************')
+	]

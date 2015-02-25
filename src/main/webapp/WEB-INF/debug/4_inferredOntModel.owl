@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.0="http://rbmm.org/schemas/cloud4all/0.1/" > 
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/org.nvda-project">
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/screenreader"/>
+    <j.0:settings rdf:nodeID="A0"/>
+    <j.0:settings rdf:nodeID="A1"/>
+    <j.0:settings rdf:nodeID="A2"/>
+    <j.0:settings rdf:nodeID="A3"/>
+    <j.0:settings rdf:nodeID="A4"/>
+    <j.0:settings rdf:nodeID="A5"/>
+    <j.0:settings rdf:nodeID="A6"/>
+    <j.0:settings rdf:nodeID="A7"/>
+    <j.0:settings rdf:nodeID="A8"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.nvda-project</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/org.nvda-project</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <j.0:settings rdf:nodeID="A9"/>
+    <j.0:settings rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A12"/>
+    <j.0:setting rdf:nodeID="A13"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/org.chrome.cloud4chrome</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderBrailleOutput</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderBrailleOutput</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderBrailleOutput</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yellow-black</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contrastTheme</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white-black</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastTheme</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastTheme</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speakTutorialMessages</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reportHelpBalloons</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presentation\.reportHelpBalloons</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/browser">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Browser Features</j.0:name>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/AccessibilitySolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/noise">
+    <j.0:hasPrefs rdf:nodeID="A20"/>
+    <j.0:hasCondition rdf:nodeID="A21"/>
+    <j.0:hasPrefs rdf:nodeID="A22"/>
+    <j.0:refersTo rdf:nodeID="A23"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InferredConfiguration"/>
+    <j.0:hasPrefs rdf:nodeID="A24"/>
+    <j.0:hasPrefs rdf:nodeID="A25"/>
+    <j.0:hasPrefs rdf:nodeID="A26"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noise</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noise</j.0:id>
+    <j.0:hasPrefs rdf:nodeID="A27"/>
+    <j.0:refersTo rdf:nodeID="A28"/>
+    <j.0:hasPrefs rdf:nodeID="A29"/>
+    <j.0:refersTo rdf:nodeID="A30"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/PreferenceSet"/>
+    <j.0:hasPrefs rdf:nodeID="A31"/>
+    <j.0:hasPrefs rdf:nodeID="A32"/>
+    <j.0:hasMetadata rdf:nodeID="A33"/>
+    <j.0:hasMetadata rdf:nodeID="A34"/>
+    <j.0:hasPrefs rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/NoPrefferdAT">
+    <j.0:messages rdf:nodeID="A36"/>
+    <j.0:messages rdf:nodeID="A37"/>
+    <j.0:messages rdf:nodeID="A38"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Message"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synth</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.synth</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gpii.net/common/operators/inRange</j.0:type>
+    <j.0:min rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18:00</j.0:min>
+    <j.0:max rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:00</j.0:max>
+    <j.0:inputPath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/conditions/noise</j.0:inputPath>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouseTrailing</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/mouseTrailing</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.android.persistentConfiguration">
+    <j.0:settings rdf:nodeID="A39"/>
+    <j.0:settings rdf:nodeID="A40"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.persistentConfiguration</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.persistentConfiguration</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InstalledSolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">required</j.0:type>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:scope>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Metadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.freedomscientific.jaws">
+    <j.0:settings rdf:nodeID="A41"/>
+    <j.0:settings rdf:nodeID="A42"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.freedomscientific.jaws</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.freedomscientific.jaws</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/screenreader"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/announceCapitals</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announceCapitals</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">announceCapitals</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white-black</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastTheme</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastTheme</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/auditoryOutLanguage</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voice</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.espeak\.voice</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.5</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cursorSize</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/cursorSize</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouseTrailing</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/mouseTrailing</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontSize</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontSize</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/announceCapitals</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sayCapForCapitals</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.espeak\.sayCapForCapitals</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/fontSize</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontSize</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontSize</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <j.0:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bla Bla Bla in Greek.</j.0:text>
+    <j.0:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gr</j.0:language>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/wordEcho</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speakTypedWords</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyboard\.speakTypedWords</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A48"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.tpvision.gpiitvproxy</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/magnifierEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">audioDescription</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.microsoft.windows.magnifier">
+    <j.0:settings rdf:nodeID="A51"/>
+    <j.0:settings rdf:nodeID="A52"/>
+    <j.0:settings rdf:nodeID="A53"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.microsoft.windows.magnifier</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.microsoft.windows.magnifier</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/magnifier"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/punctuationVerbosity</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">punctuationVerbosity</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">punctuationVerbosity</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/invertColours</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invert</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invert</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.android.settings.secure">
+    <j.0:settings rdf:nodeID="A55"/>
+    <j.0:settings rdf:nodeID="A56"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.settings.secure</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.settings.secure</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InstalledSolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">required</j.0:type>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:scope>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Metadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priority</j.0:type>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.talkback</j.0:scope>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.freedomScientific.jaws</j.0:scope>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Metadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/builtin">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Built in Features</j.0:name>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/AccessibilitySetting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.microsoft.windows.highContrast">
+    <j.0:settings rdf:nodeID="A59"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.microsoft.windows.highContrast</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.microsoft.windows.highContrast</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/win32">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/OperatingSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.9</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumeTTS</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/volumeTTS</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <j.0:refersTo rdf:resource="http://registry.gpii.net/applications/com.android.settings.secure"/>
+    <j.0:settings rdf:nodeID="A60"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Configuration"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.settings.secure</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.settings.secure</j.0:name>
+    <j.0:isActive>true</j.0:isActive>
+    <j.0:settings rdf:nodeID="A61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:name>
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.android.settings.system">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InstalledSolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <j.0:resolution>preferred</j.0:resolution>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1024</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priority</j.0:type>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.talkback</j.0:scope>
+    <j.0:scope rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.freedomScientific.jaws</j.0:scope>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Metadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/readingUnit</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autoSayAllOnPageLoad</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virtualBuffers\.autoSayAllOnPageLoad</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/invertColours</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invertColours</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invertColours</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/keyEcho</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speakTypedCharacters</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyboard\.speakTypedCharacters</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:name>
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.5</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cursorSize</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/cursorSize</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speechRate</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/invertColours</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnification</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnification</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/magnifier">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnifier</j.0:name>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/AssistiveTechnology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">audioDescription</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <j.0:resolution>preferred</j.0:resolution>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.microsoft.windows.mouseTrailing">
+    <j.0:settings rdf:nodeID="A69"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.microsoft.windows.mouseTrailing</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.microsoft.windows.mouseTrailing</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/pitch</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pitch</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.espeak\.pitch</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A67"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.tpvision.gpiitvproxy</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/magnifierPosition</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnification Mode</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MagnificationMode</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighContrastOn</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighContrastOn</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/gpii-default">
+    <j.0:refersTo rdf:nodeID="A30"/>
+    <j.0:hasPrefs rdf:nodeID="A47"/>
+    <j.0:hasPrefs rdf:nodeID="A11"/>
+    <j.0:hasPrefs rdf:nodeID="A18"/>
+    <j.0:hasMetadata rdf:nodeID="A63"/>
+    <j.0:hasMetadata rdf:nodeID="A57"/>
+    <j.0:hasPrefs rdf:nodeID="A66"/>
+    <j.0:hasPrefs rdf:nodeID="A49"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InferredConfiguration"/>
+    <j.0:hasPrefs rdf:nodeID="A71"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gpii-default</j.0:id>
+    <j.0:hasPrefs rdf:nodeID="A72"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default preferences</j.0:name>
+    <j.0:hasPrefs rdf:nodeID="A44"/>
+    <j.0:refersTo rdf:nodeID="A23"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/PreferenceSet"/>
+    <j.0:hasPrefs rdf:nodeID="A65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rbmm.org/schemas/cloud4all/0.1/screenreader">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screen Reader</j.0:name>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/AssistiveTechnology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A17"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/de.fraunhofer.iao.C4A-TVM</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <j.0:solPreferred>true</j.0:solPreferred>
+    <j.0:refersTo rdf:resource="http://registry.gpii.net/applications/com.android.talkback"/>
+    <j.0:settings rdf:nodeID="A73"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Configuration"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.talkback</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.talkback</j.0:name>
+    <j.0:isActive>true</j.0:isActive>
+    <j.0:settings rdf:nodeID="A58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/volume</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STREAM_SYSTEM</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STREAM_SYSTEM</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastTheme</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastTheme</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastTheme</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.android.talkback">
+    <j.0:settings rdf:nodeID="A14"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.talkback</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.talkback</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/screenreader"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InstalledSolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <j.0:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet.</j.0:text>
+    <j.0:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</j.0:language>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/pitch</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tts_default_pitch</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tts_default_pitch</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.android.audioManager">
+    <j.0:settings rdf:nodeID="A74"/>
+    <j.0:settings rdf:nodeID="A76"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.audioManager</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.audioManager</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/InstalledSolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/magnifierPosition</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierPosition</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierPosition</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.yourdolphin.supernova-as">
+    <j.0:settings rdf:nodeID="A78"/>
+    <j.0:settings rdf:nodeID="A54"/>
+    <j.0:settings rdf:nodeID="A19"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.yourdolphin.supernova-as</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.yourdolphin.supernova-as</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/screenreader"/>
+    <j.0:settings rdf:nodeID="A79"/>
+    <j.0:settings rdf:nodeID="A43"/>
+    <j.0:settings rdf:nodeID="A15"/>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/magnifier"/>
+    <j.0:settings rdf:nodeID="A80"/>
+    <j.0:settings rdf:nodeID="A77"/>
+    <j.0:settings rdf:nodeID="A81"/>
+    <j.0:settings rdf:nodeID="A50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/screenReaderTTSEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenReaderTTSEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/punctuationVerbosity</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">symbolLevel</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.symbolLevel</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/com.microsoft.windows.cursors">
+    <j.0:settings rdf:nodeID="A83"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.microsoft.windows.cursors</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.microsoft.windows.cursors</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/builtin"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumeTTS</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.espeak\.volume</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tts_default_rate</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tts_default_rate</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/language</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locale</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locale</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://registry.gpii.net/applications/org.chrome.cloud4chrome">
+    <j.0:settings rdf:nodeID="A75"/>
+    <j.0:settings rdf:nodeID="A64"/>
+    <j.0:settings rdf:nodeID="A82"/>
+    <j.0:settings rdf:nodeID="A84"/>
+    <j.0:settings rdf:nodeID="A16"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">org.chrome.cloud4chrome</j.0:name>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Solution"/>
+    <j.0:settings rdf:nodeID="A46"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/org.chrome.cloud4chrome</j.0:id>
+    <j.0:class rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/browser"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <j.0:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you.</j.0:text>
+    <j.0:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</j.0:language>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A85"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/de.fraunhofer.iao.C4A-TVM</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/cursorSize</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cursor</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%SystemRoot%\cursors\</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/punctuationVerbosity</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punctuation</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloud4allVoiceProfile-GlobalContext\.Punctuation</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/volumeTTS</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STREAM_MUSIC</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STREAM_MUSIC</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/magnifierEnabled</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnifierEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/magnification</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnification</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnification</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/mouseTrailing</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MouseTrails</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MouseTrails</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application</j.0:type>
+    <j.0:setting rdf:nodeID="A45"/>
+    <j.0:setting rdf:nodeID="A70"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/org.chrome.cloud4chrome</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <j.0:refersTo rdf:resource="http://registry.gpii.net/applications/com.android.audioManager"/>
+    <j.0:settings rdf:nodeID="A86"/>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Configuration"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/applications/com.android.audioManager</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.android.audioManager</j.0:name>
+    <j.0:isActive>true</j.0:isActive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/wordEcho</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wordEcho</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wordEcho</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/keyEcho</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyEcho</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyEcho</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/fontSize</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontScale</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fontScale</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rate</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speech\.espeak\.rate</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <j.0:refersTo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/speechRate</j.0:refersTo>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speed</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloud4allVoiceProfile-GlobalContext\.Speed</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.0:value>
+    <j.0:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common</j.0:type>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highContrastEnabled</j.0:name>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/highContrastEnabled</j.0:id>
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:type rdf:resource="http://rbmm.org/schemas/cloud4all/0.1/Setting"/>
+    <j.0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://registry.gpii.net/common/volumeTTS</j.0:id>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumeTTS</j.0:name>
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.9</j.0:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <j.0:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yellow-black</j.0:value>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contrastTheme</j.0:name>
+  </rdf:Description>
+</rdf:RDF>

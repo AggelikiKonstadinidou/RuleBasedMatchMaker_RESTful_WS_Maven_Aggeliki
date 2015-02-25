@@ -1,0 +1,32 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "es.codefactory.android.app.ma" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 200.0
+          }
+        }
+      }
+    },
+    "turn-down-light" : {
+      "applications" : {
+        "es.codefactory.android.app.ma" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 200.0
+          }
+        }
+      },
+      "conditions" : [ {
+        "inputPath" : "http://registry.gpii.net/conditions/noise",
+        "max" : "6:00",
+        "min" : "18:00",
+        "type" : "http://gpii.net/common/operators/inRange"
+      } ]
+    }
+  }
+}

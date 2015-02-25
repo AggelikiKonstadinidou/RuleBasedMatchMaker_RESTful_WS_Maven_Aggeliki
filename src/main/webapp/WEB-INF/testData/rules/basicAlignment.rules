@@ -1,0 +1,96 @@
+@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+[AlignContext:
+(?ps rdf:type c4a:PreferenceSet)
+->
+(?ps rdf:type c4a:InferredConfiguration)
+]
+
+[MatchSolutions: 
+(?if rdf:type c4a:InferredConfiguration)
+(?if c4a:hasPrefs ?pref)
+
+(?pref rdf:type c4a:Preference)
+(?pref c4a:type "common")
+(?pref c4a:id ?p_id)
+(?pref c4a:name ?p_name)
+(?pref c4a:value ?p_value)
+
+(?solution rdf:type c4a:InstalledSolution)
+(?solution c4a:id ?sol_id)
+(?solution c4a:name ?sol_name)
+(?solution c4a:settings ?setting)
+
+(?setting rdf:type c4a:Setting)
+(?setting c4a:refersTo ?set_id)
+
+equal(?p_id, ?set_id)
+
+makeSkolem(?newConfig, ?solution, ?if)
+makeSkolem(?newSetting, ?setting, ?pref)
+->
+(?if c4a:refersTo ?newConfig)
+(?newConfig c4a:refersTo ?solution)
+(?newConfig c4a:settings ?newSetting)
+(?newConfig rdf:type c4a:Configuration)
+(?newConfig c4a:id ?sol_id)
+(?newConfig c4a:name ?sol_name)
+(?newConfig c4a:isActive "true")
+
+(?newSetting rdf:type c4a:Setting)
+(?newSetting c4a:id ?p_id)
+(?newSetting c4a:name ?p_name)
+(?newSetting c4a:value ?p_value)
+]
+
+[MatchSolutions: 
+(?if rdf:type c4a:InferredConfiguration)
+(?if c4a:hasPrefs ?pref)
+
+(?pref rdf:type c4a:Preference)
+(?pref c4a:type "application")
+(?pref c4a:id ?prefSol_id)
+(?pref c4a:setting ?prefSetting)
+
+(?prefSetting c4a:name ?p_name)
+(?prefSetting c4a:value ?p_value)
+
+(?solution rdf:type c4a:InstalledSolution)
+(?solution c4a:id ?instSol_id)
+(?solution c4a:name ?instSol_name)
+
+equal(?prefSol_id, ?instSol_id)
+
+makeSkolem(?newConfig, ?solution, ?if)
+makeSkolem(?newSetting, ?pref, ?prefSetting)
+->
+(?if c4a:refersTo ?newConfig)
+(?newConfig c4a:refersTo ?solution)
+(?newConfig c4a:settings ?newSetting)
+(?newConfig rdf:type c4a:Configuration)
+(?newConfig c4a:id ?instSol_id)
+(?newConfig c4a:name ?instSol_name)
+(?newConfig c4a:isActive "true")
+
+(?newSetting rdf:type c4a:Setting)
+(?newSetting c4a:id ?prefSol_id)
+(?newSetting c4a:name ?p_name)
+(?newSetting c4a:value ?p_value)
+]
+
+// Removes all matched common settings from a configuration for which a user has app-specific preferences defined 
+[RemoveCommonSettings: 
+(?if c4a:refersTo ?config)
+(?config rdf:type c4a:Configuration)
+(?config c4a:id ?sol_id)
+(?config c4a:settings ?set1)
+(?config c4a:settings ?set2)
+(?set1 c4a:id ?set1_id)
+(?set2 c4a:id ?set2_id)
+notEqual(?set1, ?set2)
+notEqual(?set2_id, ?sol_id)
+equal(?set1_id, ?sol_id)
+->
+drop(4)
+]

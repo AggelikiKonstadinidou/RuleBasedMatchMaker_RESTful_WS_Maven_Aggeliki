@@ -1,0 +1,25 @@
+# Querry all applications and settings to contextualized preferences 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX c4a:  <http://rbmm.org/schemas/cloud4all/0.1/>
+SELECT DISTINCT
+	?type 
+	(str(?c) as ?contextID)
+	(str(?an) as ?appName)
+	(str(?aa) as ?appActive)
+	(str(?si) as ?setID)
+	(str(?sv) as ?setValue)
+	(str(?sn) as ?setName)
+WHERE
+{
+	?if rdf:type c4a:InferredConfiguration.
+	?if c4a:id ?c.
+	?if c4a:refersTo ?app.
+	?app rdf:type ?type.
+	?app c4a:name ?an.
+	?app c4a:isActive ?aa.
+	?app c4a:settings ?set.
+	?set c4a:id ?si.
+	?set c4a:value ?sv.
+	?set c4a:name ?sn.
+} ORDER BY DESC(?c)

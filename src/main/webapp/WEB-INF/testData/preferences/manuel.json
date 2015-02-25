@@ -1,0 +1,60 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/magnifierEnabled": true,
+					"http://registry.gpii.net/common/magnification": 2.0,
+					"http://registry.gpii.net/common/matchMakerType": "RuleBased"					
+                },
+                "metadata": [
+                    {
+                        "type": "priority",
+                        "scope": [
+                            "http://registry.gpii.net/applications/com.microsoft.windows.magnifier"
+                        ],
+                        "value": 1024
+                    }
+                ]					
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "win32",
+            "version": "5.0.0"
+        },
+        "solutions": [
+            {
+                "id": "com.microsoft.windows.onscreenKeyboard"
+            },
+            {
+                "id": "com.microsoft.windows.magnifier"
+            },
+			{
+				"id": "com.microsoft.windows.displaySettings"
+			},			
+            {
+                "id": "com.microsoft.windows.highContrast"
+            },
+            {
+                "id": "org.nvda-project"
+            },			
+            {
+                "id": "com.yourdolphin.supernova-as"
+            },
+            {
+                "id": "com.texthelp.readWriteGold"
+            }		
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [
+        "gpii-default",
+        "nighttime-at-home"
+    ],
+    "inverseCapabilities": {},
+    "rematch": {}
+}

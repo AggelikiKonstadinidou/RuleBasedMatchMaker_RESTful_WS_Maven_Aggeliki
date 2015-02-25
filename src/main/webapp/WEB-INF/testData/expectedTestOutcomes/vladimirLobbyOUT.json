@@ -1,0 +1,124 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "com.microsoft.windows.cursors" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/cursorSize" : 0.5
+          }
+        },
+        "com.microsoft.windows.highContrast" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/highContrastEnabled" : true
+          }
+        },
+        "com.microsoft.windows.mouseTrailing" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/mouseTrailing" : 5.0
+          }
+        },
+        "org.chrome.cloud4chrome" : {
+          "active" : false,
+          "settings" : {
+            "http://registry.gpii.net/applications/org.chrome.cloud4chrome" : {
+              "fontSize" : "medium",
+              "highContrastEnabled" : true
+            }
+          }
+        },
+        "org.nvda-project" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/readingUnit" : "sentence",
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 300.0
+          }
+        }
+      },
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+          }
+        },
+        "scope" : [ "org.nvda-project" ],
+        "type" : "helpMessage"
+      } ]
+    },
+    "subway" : {
+      "applications" : {
+        "com.microsoft.windows.cursors" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/cursorSize" : 0.5
+          }
+        },
+        "com.microsoft.windows.highContrast" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/highContrastEnabled" : true
+          }
+        },
+        "com.microsoft.windows.mouseTrailing" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/mouseTrailing" : 5.0
+          }
+        },
+        "org.chrome.cloud4chrome" : {
+          "active" : false,
+          "settings" : {
+            "http://registry.gpii.net/applications/org.chrome.cloud4chrome" : {
+              "fontSize" : "medium",
+              "highContrastEnabled" : true
+            }
+          }
+        },
+        "org.nvda-project" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/readingUnit" : "sentence",
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 300.0
+          }
+        }
+      },
+      "conditions" : [ {
+        "inputPath" : "http://registry\\.gpii\\.net/common/environment/visual\\.luminance",
+        "max" : 400000.0,
+        "min" : 400.0,
+        "type" : "http://registry.gpii.net/conditions/inRange"
+      } ],
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+          }
+        },
+        "scope" : [ "org.nvda-project" ],
+        "type" : "helpMessage"
+      } ]
+    }
+  }
+}

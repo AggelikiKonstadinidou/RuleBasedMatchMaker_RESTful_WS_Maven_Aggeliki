@@ -1,0 +1,205 @@
+{
+  "@context" : {
+    "c4a" : "http://rbmm.org/schemas/cloud4all/0.1/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@graph" : [ {
+    "@id" : "c4a:gpii-default",
+    "@type" : "c4a:PreferenceSet",
+    "c4a:hasMetadata" : [ {
+      "@type" : "c4a:Metadata",
+      "c4a:scope" : [ "http://registry.gpii.net/common/screenReaderTTSEnabled" ],
+      "c4a:type" : "required",
+      "c4a:value" : "1024"
+    }, {
+      "@type" : "c4a:Metadata",
+      "c4a:scope" : [ "http://registry.gpii.net/applications/com.freedomScientific.jaws", "http://registry.gpii.net/applications/com.android.talkback" ],
+      "c4a:type" : "priority",
+      "c4a:value" : "1024"
+    } ],
+    "c4a:hasPrefs" : [ {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/speechRate",
+      "c4a:name" : "speechRate",
+      "c4a:type" : "common",
+      "c4a:value" : "300"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/org.chrome.cloud4chrome",
+      "c4a:setting" : [ {
+        "c4a:name" : "highContrastEnabled",
+        "c4a:value" : "true"
+      }, {
+        "c4a:name" : "fontSize",
+        "c4a:value" : "medium"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/screenReaderTTSEnabled",
+      "c4a:name" : "screenReaderTTSEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/mouseTrailing",
+      "c4a:name" : "mouseTrailing",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/de.fraunhofer.iao.C4A-TVM",
+      "c4a:setting" : [ {
+        "c4a:name" : "contrastTheme",
+        "c4a:value" : "yellow-black"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastEnabled",
+      "c4a:name" : "highContrastEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/cursorSize",
+      "c4a:name" : "cursorSize",
+      "c4a:type" : "common",
+      "c4a:value" : "0.5"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastTheme",
+      "c4a:name" : "highContrastTheme",
+      "c4a:type" : "common",
+      "c4a:value" : "white-black"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/com.tpvision.gpiitvproxy",
+      "c4a:setting" : [ {
+        "c4a:name" : "audioDescription",
+        "c4a:value" : "1"
+      } ],
+      "c4a:type" : "application"
+    } ],
+    "c4a:id" : "gpii-default",
+    "c4a:name" : "Default preferences"
+  }, {
+    "@id" : "c4a:noise",
+    "@type" : "c4a:PreferenceSet",
+    "c4a:hasCondition" : [ {
+      "@type" : "c4a:Condition",
+      "c4a:inputPath" : "http://registry.gpii.net/conditions/noise",
+      "c4a:max" : "6:00",
+      "c4a:min" : "18:00",
+      "c4a:type" : "http://gpii.net/common/operators/inRange"
+    } ],
+    "c4a:hasMetadata" : [ {
+      "@type" : "c4a:Metadata",
+      "c4a:scope" : [ "http://registry.gpii.net/common/screenReaderTTSEnabled" ],
+      "c4a:type" : "required",
+      "c4a:value" : "1024"
+    }, {
+      "@type" : "c4a:Metadata",
+      "c4a:scope" : [ "http://registry.gpii.net/applications/com.freedomScientific.jaws", "http://registry.gpii.net/applications/com.android.talkback" ],
+      "c4a:type" : "priority",
+      "c4a:value" : "1024"
+    } ],
+    "c4a:hasPrefs" : [ {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/speechRate",
+      "c4a:name" : "speechRate",
+      "c4a:type" : "common",
+      "c4a:value" : "300"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/org.chrome.cloud4chrome",
+      "c4a:setting" : [ {
+        "c4a:name" : "highContrastEnabled",
+        "c4a:value" : "true"
+      }, {
+        "c4a:name" : "fontSize",
+        "c4a:value" : "medium"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/screenReaderTTSEnabled",
+      "c4a:name" : "screenReaderTTSEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/mouseTrailing",
+      "c4a:name" : "mouseTrailing",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/de.fraunhofer.iao.C4A-TVM",
+      "c4a:setting" : [ {
+        "c4a:name" : "contrastTheme",
+        "c4a:value" : "yellow-black"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastEnabled",
+      "c4a:name" : "highContrastEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : "true"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/cursorSize",
+      "c4a:name" : "cursorSize",
+      "c4a:type" : "common",
+      "c4a:value" : "0.5"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastTheme",
+      "c4a:name" : "highContrastTheme",
+      "c4a:type" : "common",
+      "c4a:value" : "white-black"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/com.tpvision.gpiitvproxy",
+      "c4a:setting" : [ {
+        "c4a:name" : "audioDescription",
+        "c4a:value" : "1"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/volumeTTS",
+      "c4a:name" : "volumeTTS",
+      "c4a:type" : "common",
+      "c4a:value" : "0.9"
+    } ],
+    "c4a:id" : "noise",
+    "c4a:name" : "noise"
+  }, {
+    "@id" : "c4a:win32",
+    "@type" : "c4a:OperatingSystem",
+    "name" : "win32",
+    "version" : "5.0.0"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.android.talkback",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.android.talkback"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.android.persistentConfiguration",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.android.persistentConfiguration"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.android.audioManager",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.android.audioManager"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.android.settings.system",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.android.settings.system"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.android.settings.secure",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.android.settings.secure"
+  } ]
+}
