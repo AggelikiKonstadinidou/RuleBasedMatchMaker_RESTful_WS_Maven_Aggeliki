@@ -1,0 +1,338 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+[NATC_RES_rangeVAl:
+	(?if rdf:type c4a:InferredConfiguration)
+	
+	// if there is a NoATConflict that refers to a preference within the '
+	(?if c4a:hasConflict ?conflict)
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:name "NoATConflict")
+	(?conflict c4a:refersTo ?pref_scope)
+	
+	// if there is a preference substitute   	
+	(?substSet rdf:type c4a:PreferenceSubstituteSet)
+	(?substSet c4a:scope ?pref_scope)
+	(?substSet c4a:id ?pref_id)
+	(?substSet c4a:transform ?trans)
+	
+	// if there is a preference object with the same '?pref_id' to the conflict  	
+	(?if c4a:hasPrefs ?pref)
+	(?pref c4a:id ?pref_id)
+	(?pref c4a:value ?pref_val)
+	
+	// check if the user's preference value is between the defined value range for a substitute 
+	(?trans c4a:valueRange ?range)
+	(?range c4a:min ?min)
+	(?range c4a:max ?max)
+	le(?pref_val, ?max)
+	ge(?pref_val, ?min)
+	
+	// get the preference recommendation
+	(?trans c4a:subsitute ?subst)
+	(?subst c4a:recommend ?recom)
+	(?recom c4a:id ?r_id)
+	(?recom c4a:value ?r_val)
+	
+	// if there are solutions that support the recommended settings
+	(?solution rdf:type c4a:InstalledSolution)
+	(?solution c4a:id ?sol_id)
+	(?solution c4a:name ?sol_name)
+	(?solution c4a:settings ?setting)
+	(?setting rdf:type c4a:Setting)
+	(?setting c4a:refersTo ?set_id)
+	(?setting c4a:name ?set_name)
+	equal(?r_id, ?set_id)
+
+	// create new knowledge
+	makeSkolem(?newConfig, ?solution, ?if)
+	makeSkolem(?newSetting, ?setting, ?pref)
+	makeSkolem(?newRec, ?newConfig, ?if)
+	
+	->
+	(?if c4a:refersTo ?newConfig)
+	(?newConfig rdf:type c4a:Configuration)
+	(?newConfig c4a:refersTo ?solution)
+	(?newConfig c4a:refersTo ?newRec)
+	(?newConfig c4a:settings ?newSetting)
+	(?newConfig c4a:id ?sol_id)
+	(?newConfig c4a:name ?sol_name)
+	(?newConfig c4a:isActive "true")
+	
+	(?newSetting rdf:type c4a:Setting)
+	(?newSetting c4a:id ?r_id)
+	(?newSetting c4a:name ?set_name)	
+	(?newSetting c4a:value ?r_val)		
+
+	(?newRec rdf:type c4a:Recommendation)
+	(?newRec c4a:refersTo ?substSet)
+	(?newRec c4a:refersTo ?subst)
+	
+	print('**** NATC_Res *************')
+	print('affected preference : ' ?pref_scope)
+	print('recommendation: ' ?r_id '+' ?r_val)
+	print('****************************')
+]
+
+[NATC_RES_singleVal:
+	(?if rdf:type c4a:InferredConfiguration)
+	
+	// if there is a NoATConflict that refers to a preference within the '
+	(?if c4a:hasConflict ?conflict)
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:name "NoATConflict")
+	(?conflict c4a:refersTo ?pref_scope)
+	
+	// if there is a preference substitute   	
+	(?substSet rdf:type c4a:PreferenceSubstituteSet)
+	(?substSet c4a:scope ?pref_scope)
+	(?substSet c4a:id ?pref_id)
+	(?substSet c4a:transform ?trans)
+	
+	// if there is a preference object with the same '?pref_id' to the conflict  	
+	(?if c4a:hasPrefs ?pref)
+	(?pref c4a:id ?pref_id)
+	(?pref c4a:value ?pref_val)
+	
+	// check if the user's preference value is equal to the defined value of the substitute 
+	(?trans c4a:value ?trans_val)
+	equal(?pref_val, ?trans_val)
+
+	// get the preference recommendation
+	(?trans c4a:subsitute ?subst)
+	(?subst c4a:recommend ?recom)
+	(?recom c4a:id ?r_id)
+	(?recom c4a:value ?r_val)
+	
+	// if there are solutions that support the recommended settings
+	(?solution rdf:type c4a:InstalledSolution)
+	(?solution c4a:id ?sol_id)
+	(?solution c4a:name ?sol_name)
+	(?solution c4a:settings ?setting)
+	(?setting rdf:type c4a:Setting)
+	(?setting c4a:refersTo ?set_id)
+	(?setting c4a:name ?set_name)
+	equal(?r_id, ?set_id)
+
+	// create new knowledge
+	makeSkolem(?newConfig, ?solution, ?if)
+	makeSkolem(?newSetting, ?setting, ?pref)
+	makeSkolem(?newRec, ?newConfig, ?if)
+	
+	->
+	(?if c4a:refersTo ?newConfig)
+	(?newConfig rdf:type c4a:Configuration)
+	(?newConfig c4a:refersTo ?solution)
+	(?newConfig c4a:refersTo ?newRec)
+	(?newConfig c4a:settings ?newSetting)
+	(?newConfig c4a:id ?sol_id)
+	(?newConfig c4a:name ?sol_name)
+	(?newConfig c4a:isActive "true")
+	
+	(?newSetting rdf:type c4a:Setting)
+	(?newSetting c4a:id ?r_id)
+	(?newSetting c4a:name ?set_name)	
+	(?newSetting c4a:value ?r_val)		
+
+	(?newRec rdf:type c4a:Recommendation)
+	(?newRec c4a:refersTo ?substSet)
+	(?newRec c4a:refersTo ?subst)
+	
+	print('**** NATC_Res *************')
+	print('affected preference : ' ?pref_scope)
+	print('recommendation: ' ?r_id '+' ?r_val)
+	print('****************************')
+]
+
+ // Choose the highest rated recommendation if there are multiple recommendations for on conflict resolutions 
+[NATC_RES_Deactivate_LowRated_Configruation:
+	// If there are 2 configurations and both configurations are active = true
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:refersTo ?config_a)
+	(?if c4a:refersTo ?config_b)
+	(?config_a rdf:type c4a:Configuration)
+	(?config_b rdf:type c4a:Configuration)
+	(?config_a c4a:isActive "true")
+	(?config_b c4a:isActive "true")
+	notEqual(?config_a, ?config_b)
+	
+	// If both configurations are recommendations
+	(?config_a c4a:refersTo ?rec_a)
+	(?config_b c4a:refersTo ?rec_b)
+	(?rec_a rdf:type c4a:Recommendation)
+	(?rec_b rdf:type c4a:Recommendation)
+	notEqual(?rec_a, ?rec_b)
+		
+	// If both recommendations belong to the same PreferenceSubstituteSet
+	(?rec_a c4a:refersTo ?ps)	
+	(?rec_b c4a:refersTo ?ps)
+	(?ps rdf:type c4a:PreferenceSubstituteSet)
+
+	(?rec_a c4a:refersTo ?subst_a)	
+	(?rec_b c4a:refersTo ?subst_b)
+	(?subst_a rdf:type c4a:PreferenceSubstitute)	
+	(?subst_b rdf:type c4a:PreferenceSubstitute)
+
+	(?subst_a c4a:rating ?rate_a)
+	(?subst_b c4a:rating ?rate_b)
+	ge(?rate_a, ?rate_b)
+	
+	(?config_b c4a:refersTo ?sol_b)
+	(?sol_b rdf:type c4a:Solution)
+	-> 
+	drop(6)
+	(?config_b c4a:isActive "false")
+	print('********* MREC_Res_Rating **********')
+	print('Configuration deactivated: ' ?sol_b)
+	print('**********************************')		
+]
+
+[MATC_Res_ATRanking:
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:refersTo ?config_a)
+	(?conflict c4a:refersTo ?config_b)
+	(?config_a c4a:isActive "true")
+	(?config_b c4a:isActive "true")
+	(?config_a c4a:refersTo ?sol_a)
+	(?config_b c4a:refersTo ?sol_b)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	noValue(?if c4a:solPreferred)
+	(?if c4a:id ?if_id)	
+	(?if c4a:refersTo ?config_a)
+	(?if c4a:refersTo ?config_b)
+	
+	(?class c4a:ranking ?r)
+	(?r ?sol_a ?r_a)
+	(?r ?sol_b ?r_b)
+	greaterThan(?r_a, ?r_b)
+	notEqual(?config_a, ?config_b)
+	->
+	drop(4)
+	(?config_b c4a:isActive "false")
+	print('****************************')
+	print('**** MATC_Res_ATRanking ****')
+	print('Configuration activated: ' ?sol_a)
+	print('Configuration deactivated: ' ?sol_b)	
+	print('****************************')	
+]
+
+[MATC_Res_ATLayer:
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:refersTo ?config_a)
+	(?conflict c4a:refersTo ?config_b)
+	(?config_a c4a:isActive "true")
+	(?config_b c4a:isActive "true")
+	(?config_a c4a:refersTo ?sol_a)
+	(?config_b c4a:refersTo ?sol_b)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	noValue(?if c4a:solPreferred)
+	(?if c4a:id ?if_id)	
+	(?if c4a:refersTo ?config_a)
+	(?if c4a:refersTo ?config_b)
+	
+	(?sol_a c4a:class ?class_a)
+	(?sol_b c4a:class ?class_b)
+	(?class_a rdf:type c4a:AccessibilityLayer)
+	(?class_b rdf:type c4a:AccessibilityLayer)	
+	equal(?class_a,c4a:at)
+	equal(?class_b,c4a:browser)
+	notEqual(?config_a, ?config_b)
+	->
+	drop(4)
+	(?config_b c4a:isActive "false")	
+	print('**** MATC_Res_ATLayer ************')
+	print('Configuration deactivated: ' ?sol_b)
+	print('**********************************')	
+]
+
+[MATC_Res_ATContext:
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:refersTo ?config_a)
+	(?conflict c4a:refersTo ?config_b)
+	(?config_a c4a:isActive "true")
+	(?config_b c4a:isActive "true")
+	(?config_a c4a:refersTo ?sol_a)
+	(?config_b c4a:refersTo ?sol_b)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	noValue(?if c4a:solPreferred)
+	(?if c4a:id ?if_id)	
+	(?if c4a:refersTo ?config_a)
+	(?if c4a:refersTo ?config_b)
+	
+	(?sol_a c4a:class ?class_a)
+	(?sol_b c4a:class ?class_b)
+	(?class_a rdf:type c4a:AccessibilityContext)
+	(?class_b rdf:type c4a:AccessibilityContext)	
+	equal(?class_a,c4a:output)
+	equal(?class_b,c4a:task)
+	notEqual(?config_a, ?config_b)
+	->
+	drop(4)
+	(?config_b c4a:isActive "false")
+	print('**** MATC_Res_ATContext **********')
+	print('Configuration deactivated: ' ?sol_b)
+	print('**********************************')	
+]
+
+[Res1aJustOnePreferred:
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:class ?class)
+	(?conflict c4a:refersTo ?config)
+	(?config c4a:isActive "true")
+	(?config c4a:refersTo ?sol)
+	
+	(?conflict c4a:refersTo ?config_b)
+	(?config_b c4a:solPreferred "true")
+	(?config_b c4a:isActive "true")
+	(?config_b c4a:refersTo ?sol_b)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)	
+	(?if c4a:refersTo ?config)
+	(?if c4a:refersTo ?config_b)
+	notEqual(?config, ?config_b)
+	noValue(?config c4a:solPreferred)
+	->
+	drop(3)
+	(?config c4a:isActive "false")
+	print('***********Resolution A MSC ******************')
+	print('CONTEXT: ' ?if_id)
+	print('conflict: ' ?class)
+	print('deactivated solution: ' ?sol)	
+	print('activated solution: ' ?sol_b)	
+]
+
+[Res1bTwoSolPreferred:
+	(?conflict rdf:type c4a:Conflict)
+	(?conflict c4a:class ?class)
+	(?conflict c4a:refersTo ?config)
+	(?conflict c4a:activated ?config)
+	(?config c4a:isActive "true")
+	(?config c4a:solPreferred "true")
+	(?config c4a:refersTo ?sol)
+	
+	(?conflict c4a:refersTo ?config_b)
+	(?conflict c4a:activated ?config_b)	
+	(?config_b c4a:isActive "true")
+	(?config_b c4a:solPreferred "true")
+	(?config_b c4a:refersTo ?sol_b)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)	
+	(?if c4a:refersTo ?config)
+	(?if c4a:refersTo ?config_b)
+	notEqual(?config, ?config_b)
+	noValue(?conflict c4a:deactivated ?x)
+	->
+	drop(4, 5)
+	(?config c4a:isActive "false")
+	(?conflict c4a:deactivated ?config)
+	print('*********** Resolution B MSC ******************')
+	print('CONTEXT: ' ?if_id)
+	print('conflict: ' ?class)
+	print('deactivated solution: ' ?sol)	
+	print('activated solution: ' ?sol_b)	
+]

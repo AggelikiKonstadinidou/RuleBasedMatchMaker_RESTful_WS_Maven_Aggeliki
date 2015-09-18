@@ -1,0 +1,32 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "com.microsoft.windows.displaySettings" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/applications/com.microsoft.windows.displaySettings" : {
+              "isActive" : true
+            }
+          }
+        },
+        "com.yourdolphin.supernova-as" : {
+          "active" : false,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderBrailleOutput" : true,
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 350.0
+          }
+        },
+        "org.nvda-project" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderBrailleOutput" : true,
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 350.0
+          }
+        }
+      }
+    }
+  }
+}

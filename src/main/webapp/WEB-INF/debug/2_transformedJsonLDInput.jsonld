@@ -1,0 +1,113 @@
+{
+  "@context" : {
+    "c4a" : "http://rbmm.org/schemas/cloud4all/0.1/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph" : [ {
+    "@id" : "c4a:gpii-default",
+    "@type" : "c4a:PreferenceSet",
+    "c4a:hasPrefs" : [ {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/auditoryOutLanguage",
+      "c4a:name" : "auditoryOutLanguage",
+      "c4a:type" : "common",
+      "c4a:value" : "en"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/speechRate",
+      "c4a:name" : "speechRate",
+      "c4a:type" : "common",
+      "c4a:value" : {
+        "@type" : "xsd:float",
+        "@value" : "350.0"
+      }
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/matchMakerType",
+      "c4a:name" : "matchMakerType",
+      "c4a:type" : "common",
+      "c4a:value" : "RuleBased"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/volume",
+      "c4a:name" : "volume",
+      "c4a:type" : "common",
+      "c4a:value" : {
+        "@type" : "xsd:float",
+        "@value" : "0.6"
+      }
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/screenReaderTTSEnabled",
+      "c4a:name" : "screenReaderTTSEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : true
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastEnabled",
+      "c4a:name" : "highContrastEnabled",
+      "c4a:type" : "common",
+      "c4a:value" : true
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/applications/com.microsoft.windows.displaySettings",
+      "c4a:setting" : [ {
+        "c4a:name" : "isActive",
+        "c4a:value" : "true"
+      } ],
+      "c4a:type" : "application"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/language",
+      "c4a:name" : "language",
+      "c4a:type" : "common",
+      "c4a:value" : "en"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/highContrastTheme",
+      "c4a:name" : "highContrastTheme",
+      "c4a:type" : "common",
+      "c4a:value" : "white-black"
+    } ],
+    "c4a:id" : "gpii-default",
+    "c4a:name" : "Default preferences"
+  }, {
+    "@id" : "c4a:android",
+    "@type" : "c4a:OperatingSystem",
+    "name" : "android",
+    "version" : "3.0.31-693204"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.microsoft.windows.onscreenKeyboard",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.microsoft.windows.onscreenKeyboard"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.microsoft.windows.magnifier",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.microsoft.windows.magnifier"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.microsoft.windows.displaySettings",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.microsoft.windows.displaySettings"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.microsoft.windows.highContrast",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.microsoft.windows.highContrast"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.yourdolphin.supernova-as",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.yourdolphin.supernova-as"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.texthelp.readWriteGold",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.texthelp.readWriteGold"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/org.chrome.cloud4chrome",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "org.chrome.cloud4chrome"
+  }, {
+    "@id" : "http://registry.gpii.net/applications/com.certh.service-synthesis",
+    "@type" : "c4a:InstalledSolution",
+    "name" : "com.certh.service-synthesis"
+  } ]
+}

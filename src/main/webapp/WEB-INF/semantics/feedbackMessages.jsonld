@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "c4a": "http://rbmm.org/schemas/cloud4all/0.1/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "c4a:NoPreferredAT",
+            "@type": "c4a:Message",
+            "c4a:messageType": "helpMessage",
+            "c4a:messages": [
+                {
+                    "c4a:language": "en",
+                    "c4a:text": "Your preferred CLASS_TO_BE_REPLACED is not available on the device. We have launched SOLUTION_TO_BE_REPLACED for you.",
+					"c4a:learnMore": "LINK_TO_BE_REPLACED"
+                },
+                {
+                    "c4a:language": "de",
+                    "c4a:text": "Der bevorzugte CLASS_TO_BE_REPLACED ist auf diesem Gerät nicht verfügbar. Wir haben SOLUTION_TO_BE_REPLACED für dich gestartet.",
+					"c4a:learnMore": "LINK_TO_BE_REPLACED"
+                }
+            ]
+        }
+    ]
+}

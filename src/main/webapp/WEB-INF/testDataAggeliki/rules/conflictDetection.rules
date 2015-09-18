@@ -1,0 +1,61 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+		
+// DETECTION OF MULTIPLE SOLUTION CONFLICTS FOR ASSISTIVE TECHNOLOGIES 
+
+	[DetectMultipleSolutionConflict: 
+	(?config_x c4a:refersTo ?s1)
+	(?config_y c4a:refersTo ?s2)
+	
+	(?config_x rdf:type c4a:Configuration)
+	(?config_y rdf:type c4a:Configuration)
+	
+	notEqual(?config_x, ?config_y)
+	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)
+	(?if c4a:refersTo ?config_x)
+	(?if c4a:refersTo ?config_y)
+	
+	(?s1 c4a:class ?c) 
+	(?s2 c4a:class ?c)
+	(?c rdf:type c4a:AccessibilitySolution)
+	
+	makeSkolem(?newConflict, ?if, ?c)
+	->
+	(?newConflict rdf:type c4a:Conflict)
+	(?newConflict c4a:name "MultipleSolutionConflict")
+	(?newConflict c4a:refersTo ?config_x)
+	(?newConflict c4a:refersTo ?config_y)
+	(?newConflict c4a:class ?c)
+	
+	(?config_x c4a:hasConflict ?newConflict)
+	(?config_y c4a:hasConflict ?newConflict)
+	
+	print('************ CONFLICT DETECTION ****************')
+	print('CONFLICT: Multiple Solution Conflict')
+	print('CONFLICT CLASS: Multiple Assistive Technologies')
+	print('TYPE: ' ?c)
+	print('CONTEXT' ?if_id)
+	print('AFFECTED SOLUTION: ' ?s1)
+	]
+	
+	// DETECTION OF NoATConflict (NATC) - no configuration available   
+
+	[DetectNoATConflict: 
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:hasMetadata ?meta)
+	(?meta c4a:type "required")
+	(?meta c4a:scope ?pref)
+	noValue(?if c4a:refersTo ?config)
+	makeSkolem(?newConflict, ?if)
+	->
+	(?newConflict rdf:type c4a:Conflict)
+	(?newConflict c4a:name "NoATConflict")
+	(?newConflict c4a:refersTo ?pref)
+	(?if c4a:hasConflict ?newConflict)
+	
+	print('************ CONFLICT DETECTION ****************')
+	print('CONFLICT: NoATConflict')
+	print('AFFECTED Preference: ' ?pref)
+	]

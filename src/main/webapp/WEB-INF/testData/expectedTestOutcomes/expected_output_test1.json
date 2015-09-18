@@ -1,0 +1,66 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "org.nvda-project" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true
+          }
+        }
+      },
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Bla Bla Bla in Greek."
+          }
+        },
+        "scope" : [ "org.nvda-project" ],
+        "type" : "helpMessage"
+      } ]
+    },
+    "nighttime-at-home" : {
+      "applications" : {
+        "org.nvda-project" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true
+          }
+        }
+      },
+      "conditions" : [ {
+        "inputPath" : "http://registry.gpii.net/conditions/timeOfDay",
+        "max" : "1800",
+        "min" : "600",
+        "type" : "http://gpii.net/common/operators/inRange"
+      } ],
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Bla Bla Bla in Greek."
+          }
+        },
+        "scope" : [ "org.nvda-project" ],
+        "type" : "helpMessage"
+      } ]
+    }
+  }
+}

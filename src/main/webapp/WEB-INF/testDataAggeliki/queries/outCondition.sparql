@@ -1,0 +1,22 @@
+# Querry all conditions to contextualized preferences 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX c4a:  <http://rbmm.org/schemas/cloud4all/0.1/>
+SELECT DISTINCT 
+	?type
+	(str(?c) as ?contextID)
+	(str(?co) as ?condOp)
+	(str(?ca) as ?condPa)
+	(str(?cmi) as ?condMi)
+	(str(?cma) as ?condMa)	
+WHERE
+{
+	?if rdf:type c4a:InferredConfiguration.
+	?if c4a:id ?c.
+	?if c4a:hasCondition ?cond.
+	?cond rdf:type ?type.
+	?cond c4a:type ?co.
+	?cond c4a:inputPath ?ca.
+	?cond c4a:min ?cmi.
+	?cond c4a:max ?cma.
+} ORDER BY DESC(?c)

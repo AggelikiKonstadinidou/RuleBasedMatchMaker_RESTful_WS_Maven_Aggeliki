@@ -1,0 +1,65 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/screenReaderTTSEnabled": true,
+                    "http://registry.gpii.net/common/screenReaderBrailleOutput": true,
+                    "http://registry.gpii.net/common/speechRate": 350,
+					"http://registry.gpii.net/applications/com.microsoft.windows.displaySettings": { 
+						"isActive": true
+					},					
+					"http://registry.gpii.net/common/matchMakerType": "RuleBased"					
+                },
+                "metadata": [
+                    {
+                        "type": "priority",
+                        "scope": [
+                            "http://registry.gpii.net/applications/org.nvda-project",
+							"http://registry.gpii.net/applications/es.codefactory.android.app.ma"
+                        ],
+                        "value": 1024
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "android",
+            "version": "3.0.31-693204"
+        },
+        "solutions": [
+            {
+                "id": "com.microsoft.windows.onscreenKeyboard"
+            },
+            {
+                "id": "com.microsoft.windows.magnifier"
+            },
+			{
+				"id": "com.microsoft.windows.displaySettings"
+			},			
+            {
+                "id": "com.microsoft.windows.highContrast"
+            },
+            {
+                "id": "org.nvda-project"
+            },			
+            {
+                "id": "com.yourdolphin.supernova-as"
+            },
+            {
+                "id": "com.texthelp.readWriteGold"
+            }
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [
+        "gpii-default",
+        "nighttime-at-home"
+    ],
+    "inverseCapabilities": {},
+    "rematch": {}
+}

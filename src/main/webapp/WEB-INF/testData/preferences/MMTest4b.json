@@ -1,0 +1,54 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/magnifierEnabled": true,
+                    "http://registry.gpii.net/common/magnification": 1.5
+                },
+                "metadata": [
+                    {
+                        "type": "required",
+                        "scope": [
+                            "http://registry.gpii.net/common/magnifierEnabled"
+                        ],
+                        "value": 1024
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "linux",
+            "version": ">=2.6.26"
+        },
+        "solutions": [
+            {
+                "id": "org.gnome.desktop.interface"
+            },
+            {
+                "id": "org.gnome.desktop.a11y.keyboard"
+            },
+            {
+                "id": "org.gnome.desktop.a11y.applications.onscreen-keyboard"
+            },
+            {
+                "id": "org.gnome.nautilus"
+            },
+            {
+                "id": "org.gnome.shell.overrides"
+            },
+            {
+                "id": "org.gnome.desktop.wm.preferences"
+            }
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}
+

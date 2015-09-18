@@ -1,0 +1,103 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/screenReaderTTSEnabled": "true",
+                    "http://registry.gpii.net/common/magnifierEnabled": "true",
+                    "http://registry.gpii.net/common/magnification": 1.5
+                },
+                "metadata": [
+                    {
+                        "type": "priority",
+                        "scope": [
+                            "org.nvda-project"
+                        ],
+                        "value": 100
+                    }
+                ]
+            },
+            "nighttime-at-home": {
+                "name": "Nighttime at home",
+                "preferences": {
+                    "http://registry.gpii.net/common/screenReaderTTSEnabled": "true",
+                    "http://registry.gpii.net/common/magnifierEnabled": "true",
+                    "http://registry.gpii.net/common/magnification": 2
+                },
+                "metadata": [
+                    {
+                        "type": "priority",
+                        "scope": [
+                            "org.nvda-project"
+                        ],
+                        "value": 100
+                    }
+                ],
+                "conditions": [
+                    {
+                        "type": "http://gpii.net/common/operators/inRange",
+                        "max": 1800,
+                        "min": 600,
+                        "inputPath": "http://registry.gpii.net/conditions/timeOfDay"
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "win32",
+            "version": "5.0.0"
+        },
+        "solutions": [
+            {
+                "id": "com.microsoft.windows.magnifier"
+            },
+            {
+                "id": "com.microsoft.windows.onscreenKeyboard"
+            },
+            {
+                "id": "org.nvda-project"
+            },
+            {
+                "id": "trace.easyOne.communicator.windows"
+            },
+            {
+                "id": "trace.easyOne.communicator.linux"
+            },
+            {
+                "id": "trace.easyOne.sudan.windows"
+            },
+            {
+                "id": "trace.easyOne.sudan.linux"
+            },
+            {
+                "id": "webinsight.webAnywhere.windows"
+            },
+            {
+                "id": "com.texthelp.readWriteGold"
+            },
+            {
+                "id": "net.opendirective.maavis"
+            },
+            {
+                "id": "com.microsoft.windows.highContrast"
+            },
+            {
+                "id": "com.microsoft.windows.mouseTracking"
+            },
+            {
+                "id": "com.microsoft.windows.cursors"
+            },
+            {
+                "id": "com.yourdolphin.supernova-as"
+            }  			
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}

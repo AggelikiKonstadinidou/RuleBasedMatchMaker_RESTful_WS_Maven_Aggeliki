@@ -1,0 +1,129 @@
+@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+	// Trigger for Matching a Service: noValue(?pref c4a:status "matched") 
+	// TODO: matches all services, may trigger multiple service conflicts ???
+	[MatchSingleService:
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:hasPrefs ?pref)
+	  
+	(?pref rdf:type c4a:Preference)
+	(?pref c4a:id ?p_id)
+	(?pref c4a:value ?p_value)
+	noValue(?pref c4a:status "matched")
+	
+	(?ssynth rdf:type c4a:InstalledSolution)
+	(?ssynth c4a:id "com.certh.service-synthesis")
+	(?ssynth c4a:service ?service)
+	
+	(?service c4a:priority ?prio)
+	(?service c4a:id ?s_id)
+	(?service c4a:settings ?set)
+	(?set c4a:name ?set_name)
+	(?set c4a:refersTo ?set_id)
+	noValue(?set c4a:type "output")
+	
+	equal(?p_id, ?set_id)
+		
+	makeSkolem(?newConfig, ?pref, ?if)
+	makeSkolem(?newServiceSetting, ?service)
+	makeSkolem(?newSetting, ?set)
+	
+	->
+	
+	(?if c4a:refersTo ?newConfig)
+	(?newConfig rdf:type c4a:Configuration)
+	(?newConfig c4a:refersTo ?ssynth)
+	(?newConfig c4a:refersTo ?pref)
+	(?newConfig c4a:id "http://registry.gpii.net/applications/com.certh.service-synthesis")
+	(?newConfig c4a:name "com.certh.service-synthesis")
+	(?newConfig c4a:isActive "true")
+	(?newConfig c4a:settings ?newServiceSetting)
+	
+	(?newServiceSetting rdf:type c4a:ServiceSetting)
+	(?newServiceSetting c4a:serviceName ?s_id)
+	(?newServiceSetting c4a:serviceInput ?newSetting)
+	(?newServiceSetting c4a:priority ?prio)
+	
+	(?newSetting rdf:type c4a:Setting)
+	(?newSetting c4a:name ?set_name)
+	(?newSetting c4a:value ?p_value)
+	(?newSetting c4a:refersTo ?p_id)
+	
+	]
+	
+	// Add default settings to a configuration
+	[AddDefaultSettings: 
+	(?config rdf:type c4a:Configuration)
+	(?config c4a:refersTo ?sol)
+	(?config c4a:settings ?confSettings)
+
+	(?sol c4a:service ?service)
+	(?service c4a:settings ?set)
+	(?set c4a:default ?d)
+	(?set c4a:refersTo ?p)
+	(?set c4a:name ?set_name)
+	(?set c4a:value ?set_value)
+	makeSkolem(?newSetting, ?set)
+	->
+	(?confSettings c4a:serviceInput ?newSetting)
+	(?newSetting rdf:type c4a:Setting)
+	(?newSetting c4a:name ?set_name)
+	(?newSetting c4a:value ?set_value)	
+	(?newSetting c4a:refersTo ?p)
+	
+	] 
+	
+	[MapParameters:
+	
+	// find the first service
+	(?configA rdf:type c4a:Configuration)
+	(?configA c4a:name "com.certh.service-synthesis")
+	(?configA c4a:isActive "true")	
+	(?configA c4a:settings ?serviceSettingA)
+	(?serviceSettingA rdf:type c4a:ServiceSetting)
+	(?serviceSettingA c4a:serviceName ?s_idA)
+	(?serviceSettingA c4a:priority ?pA)
+	
+	(?solA c4a:service ?serviceA)
+	(?serviceA c4a:id ?serviceAID)
+	(?serviceA c4a:settings ?setA)
+	(?setA c4a:type "output")
+	(?setA c4a:name ?set_nameA)
+	(?setA c4a:refersTo ?p1)
+	noValue(?setA c4a:mapped )
+	equal(?s_idA,?serviceAID)
+	
+	//find the second service
+	(?configB rdf:type c4a:Configuration)
+	(?configB c4a:name "com.certh.service-synthesis")
+	(?configB c4a:isActive "true")
+	(?configB c4a:settings ?serviceSettingB)
+	(?serviceSettingB rdf:type c4a:ServiceSetting)
+	(?serviceSettingB c4a:serviceName ?s_idB)
+	(?serviceSettingB c4a:priority ?pB)
+	
+	difference(?pA, ?pB, ?c)
+	equal(?c,1)
+
+	(?serviceSettingB c4a:serviceInput ?newSettingB)
+	(?newSettingB rdf:type c4a:Setting)
+	(?newSettingB c4a:name ?set_nameB)
+	(?newSettingB c4a:refersTo ?p2)
+	
+	equal(?p1,?p2)
+	makeSkolem(?newMetaData,?serviceSettingB,?newSettingB)
+	->
+	(?serviceSettingB c4a:hasMetadata ?newMetaData)
+	(?newMetaData rdf:type c4a:Metadata)
+	(?newMetaData c4a:fromServiceName ?s_idA)
+	(?newMetaData c4a:fromVariableName ?set_nameA)
+	(?newMetaData c4a:toServiceName ?s_idB)
+	(?newMetaData c4a:toVariableName ?set_nameB)
+	
+	
+	]
+	

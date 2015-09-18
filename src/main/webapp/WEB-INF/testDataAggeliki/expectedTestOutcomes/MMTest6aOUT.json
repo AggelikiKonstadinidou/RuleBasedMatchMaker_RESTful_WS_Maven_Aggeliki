@@ -1,0 +1,38 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "org.chrome.cloud4chrome" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/fontSize" : 18.0
+          }
+        },
+        "org.gnome.desktop.interface" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/fontSize" : 18.0
+          }
+        }
+      },
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "http://wwwpub.zih.tu-dresden.de/~loitsch/review/nvdaTutorial.html",
+            "message" : "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+          }
+        },
+        "scope" : [ "org.chrome.cloud4chrome" ],
+        "type" : "helpMessage"
+      } ]
+    }
+  }
+}

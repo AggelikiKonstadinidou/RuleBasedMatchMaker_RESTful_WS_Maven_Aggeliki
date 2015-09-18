@@ -1,0 +1,64 @@
+	@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+[NoPrefferdAT:
+	(?config rdf:type c4a:Configuration)
+	(?config c4a:isActive "true")
+	(?config c4a:refersTo ?s)
+	(?s c4a:id ?s_id)
+	(?s c4a:name ?s_name)
+	(?s c4a:class ?c)
+	(?c rdf:type c4a:AccessibilitySolution)
+	(?c c4a:name ?c_name)	
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:id ?if_id)
+	(?if c4a:refersTo ?config)
+	
+	(c4a:NoPreferredAT c4a:messageType ?msg_type)
+	(c4a:NoPreferredAT c4a:messages ?msg)
+	(?msg c4a:language ?lang)
+	(?msg c4a:text ?txt)
+	(?msg c4a:learnMore ?learnMore)
+	 
+	noValue(?config c4a:solPreferred "true")
+	makeSkolem(?newMetaData, ?if, ?s)
+	makeSkolem(?newScope, ?s_id, ?s)
+	makeSkolem(?newMessage, ?lang, ?s_id)
+	->
+	(?if c4a:hasMetadata ?newMetaData)
+	(?newMetaData rdf:type c4a:Metadata)
+	(?newMetaData c4a:messageType ?msg_type)
+	(?newMetaData c4a:scope ?newScope)
+	(?newMetaData c4a:messages ?newMessage)
+	(?newScope c4a:id ?s_id)
+	(?newScope c4a:name ?s_name)
+	(?newScope c4a:class ?c_name)	
+	(?newMessage c4a:language ?lang)
+	(?newMessage c4a:text ?txt)
+	(?newMessage c4a:learnMore ?learnMore)
+
+	print('***********FeedbackForAts******************')
+	print('CONTEXT: ' ?if_id)
+	print('HELP FOR SOLUTION: ' ?s)	
+]
+
+// Add tutorial to a helpMessage 
+[AddTuorial:
+	(?if rdf:type c4a:InferredConfiguration)
+	(?if c4a:hasMetadata ?metaData)
+	(?metaData rdf:type c4a:Metadata)
+	(?metaData c4a:scope ?scope)
+	(?metaData c4a:messages ?msg)
+	(?scope c4a:id ?s_id)
+	(?msg c4a:language ?lang)
+	(?msg c4a:learnMore ?lm)
+	equal(?lm, "LINK_TO_BE_REPLACED")
+	(?solution rdf:type c4a:Solution)
+	(?solution c4a:id ?s_id)
+	(?solution c4a:tutorial ?tut)	
+	(?tut c4a:language ?lang)
+	(?tut c4a:link ?link)
+	-> 
+	drop(7)
+	(?msg c4a:learnMore ?link)
+]

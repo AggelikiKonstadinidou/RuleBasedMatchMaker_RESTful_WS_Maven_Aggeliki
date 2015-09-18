@@ -1,0 +1,137 @@
+{
+    "@context": {
+        "c4a": "http://rbmm.org/schemas/cloud4all/0.1/",
+        "ps": "http://rbmm.org/schemas/cloud4all/0.1/PreferenceSubstitute#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "ps:magnification",
+            "@type": "c4a:PreferenceSubstituteSet",
+            "c4a:scope": [
+                "http://registry.gpii.net/common/magnification",
+                "http://registry.gpii.net/common/magnifierEnabled"
+            ],
+            "c4a:id": "http://registry.gpii.net/common/magnification",
+            "c4a:transform": [
+                {
+                    "c4a:valueRange": {
+                        "c4a:min": {
+                            "@value": "1.1",
+                            "@type": "xsd:float"
+                        },
+                        "c4a:max": {
+                            "@value": "1.5",
+                            "@type": "xsd:float"
+                        }
+                    },
+                    "c4a:subsitute": [
+                        {
+                            "@type": "c4a:PreferenceSubstitute",
+                            "c4a:rating": 9,
+                            "c4a:recommend": [
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/screenResolution",
+                                    "c4a:value": "medium"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "c4a:PreferenceSubstitute",
+                            "c4a:rating": 8,
+                            "c4a:recommend": [
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/fontSize",
+                                    "c4a:value": {
+                                        "@value": "18",
+                                        "@type": "xsd:float"
+                                    }
+                                },
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/cursorSize",
+                                    "c4a:value": {
+                                        "@value": "0.7",
+                                        "@type": "xsd:float"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "c4a:valueRange": {
+                        "c4a:min": {
+                            "@value": "1.6",
+                            "@type": "xsd:float"
+                        },
+                        "c4a:max": {
+                            "@value": "2.0",
+                            "@type": "xsd:float"
+                        }
+                    },
+                    "c4a:subsitute": [
+                        {
+                            "@type": "c4a:PreferenceSubstitute",
+                            "c4a:rating": 9,
+                            "c4a:recommend": [
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/screenResolution",
+                                    "c4a:value": "large"
+                                }
+                            ]
+                        },
+                        {
+                            "@type": "c4a:PreferenceSubstitute",
+                            "c4a:rating": 8,
+                            "c4a:recommend": [
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/fontSize",
+                                    "c4a:value": {
+                                        "@value": "24",
+                                        "@type": "xsd:float"
+                                    }
+                                },
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/cursorSize",
+                                    "c4a:value": {
+                                        "@value": "0.9",
+                                        "@type": "xsd:float"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "ps:highContrast",
+            "@type": "c4a:PreferenceSubstituteSet",
+            "c4a:scope": [
+                "http://registry.gpii.net/common/highContrastEnabled"
+            ],
+            "c4a:id": "http://registry.gpii.net/common/highContrastEnabled",
+            "c4a:transform": [
+                {
+                    "c4a:value": true,
+                    "c4a:subsitute": [
+                        {
+                            "@type": "c4a:PreferenceSubstitute",
+                            "c4a:rating": 2,
+                            "c4a:recommend": [
+                                {
+                                    "c4a:id": "http://registry.gpii.net/common/fontSize",
+                                    "c4a:value": {
+                                        "@value": "18",
+                                        "@type": "xsd:float"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/fontSize": 18
+                }
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "linux",
+            "version": ">=2.6.26"
+        },
+        "solutions": [
+            {
+                "id": "org.gnome.desktop.interface"
+            },
+            {
+                "id": "org.gnome.desktop.a11y.keyboard"
+            },
+            {
+                "id": "org.gnome.desktop.a11y.applications.onscreen-keyboard"
+            },
+            {
+                "id": "org.gnome.nautilus"
+            },
+            {
+                "id": "org.gnome.shell.overrides"
+            },
+            {
+                "id": "org.gnome.desktop.wm.preferences"
+            },
+            {
+                "id": "org.gnome.orca"
+            },
+            {
+                "id": "org.gnome.desktop.a11y.magnifier"
+            },
+            {
+                "id": "org.alsa-project"
+            },
+            {
+                "id": "org.freedesktop.xrandr"
+            },
+
+            {
+                "id": "org.chrome.cloud4chrome"
+            },
+            {
+                "id": "com.google.chrome"
+            },
+            {
+                "id": "com.bdigital.easit4all"
+            }
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}
+

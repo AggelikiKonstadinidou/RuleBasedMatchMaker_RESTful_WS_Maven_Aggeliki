@@ -1,0 +1,57 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/screenReaderTTSEnabled": true,
+                    "http://registry.gpii.net/common/speechRate": 250,
+                    "http://registry.gpii.net/common/trackingTTS": ["caret"],
+                    "http://registry.gpii.net/common/speakTutorialMessages": false,
+                    "http://registry.gpii.net/common/keyEcho": true,
+                    "http://registry.gpii.net/common/wordEcho": false,
+                    "http://registry.gpii.net/common/announceCapitals": false,
+                    "http://registry.gpii.net/common/punctuationVerbosity": "some",
+                    "http://registry.gpii.net/common/readingUnit": "paragraph",
+                    "http://registry.gpii.net/common/auditoryOutLanguage": "en",
+                    "http://registry.gpii.net/common/pitch": 0.6
+                },
+                "metadata": [
+                    {
+                        "type": "required",
+                        "scope": [
+                            "http://registry.gpii.net/common/screenReaderTTSEnabled"
+                        ],
+                        "value": 1024
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "win32",
+            "version": "5.0.0"
+        },
+        "solutions": [
+            {
+                "id": "com.yourdolphin.supernova-as"
+            },
+            {
+                "id": "org.nvda-project"
+            },
+            {
+                "id": "com.freedomscientific.jaws"
+            },
+            {
+                "id": "webinsight.webAnywhere.windows"
+            }
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}
+

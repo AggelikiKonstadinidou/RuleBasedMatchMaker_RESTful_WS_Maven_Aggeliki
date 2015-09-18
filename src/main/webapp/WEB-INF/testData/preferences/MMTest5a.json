@@ -1,0 +1,57 @@
+{
+    "preferences": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/highContrastEnabled": true,
+                    "http://registry.gpii.net/common/highContrastTheme": "yellow-black"
+                },
+                "metadata": [
+                    {
+                        "type": "required",
+                        "scope": [
+                            "http://registry.gpii.net/common/highContrastEnabled"
+                        ],
+                        "value": 1024
+                    }
+                ]
+            }
+        }
+    },
+    "deviceReporter": {
+        "OS": {
+            "id": "android",
+            "version": ">=0.1"
+        },
+        "solutions": [
+            {
+                "id": "com.android.activitymanager"
+            },
+            {
+                "id": "com.android.talkback"
+            },
+            {
+                "id": "com.android.freespeech"
+            },
+            {
+                "id": "com.android.persistentConfiguration"
+            },
+            {
+                "id": "com.android.audioManager"
+            },
+            {
+                "id": "com.android.settings.system"
+            },
+            {
+                "id": "com.android.settings.secure"
+            }
+        ]
+    },
+    "environmentReporter": {},
+    "solutionsRegistry": {},
+    "activeContexts": [],
+    "inverseCapabilities": {},
+    "rematch": {}
+}
+

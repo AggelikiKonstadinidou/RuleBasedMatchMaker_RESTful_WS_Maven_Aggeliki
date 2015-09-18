@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "c4a": "http://rbmm.org/schemas/cloud4all/0.1/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "c4a:screenreader",
+            "c4a:ranking": {
+                "http://registry.gpii.net/applications/com.freedomscientific.jaws": 640,
+                "http://registry.gpii.net/applications/org.nvda-project": 510,
+                "http://registry.gpii.net/applications/com.yourdolphin.supernova-as": 90
+            }
+        }
+    ]
+}

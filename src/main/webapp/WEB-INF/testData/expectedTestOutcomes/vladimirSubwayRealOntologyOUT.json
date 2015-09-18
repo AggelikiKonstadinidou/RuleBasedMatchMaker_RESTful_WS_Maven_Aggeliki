@@ -1,0 +1,87 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "com.android.settings.secure" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/speechRate" : 300.0
+          }
+        },
+        "com.android.talkback" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 300.0
+          }
+        }
+      },
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+          }
+        },
+        "scope" : [ "com.android.talkback" ],
+        "type" : "helpMessage"
+      } ]
+    },
+    "noise" : {
+      "applications" : {
+        "com.android.audioManager" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/volumeTTS" : 0.9
+          }
+        },
+        "com.android.settings.secure" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/speechRate" : 300.0
+          }
+        },
+        "com.android.talkback" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/screenReaderTTSEnabled" : true,
+            "http://registry.gpii.net/common/speechRate" : 300.0,
+            "http://registry.gpii.net/common/volumeTTS" : 0.9
+          }
+        }
+      },
+      "conditions" : [ {
+        "inputPath" : "http://registry.gpii.net/conditions/noise",
+        "max" : "6:00",
+        "min" : "18:00",
+        "type" : "http://gpii.net/common/operators/inRange"
+      } ],
+      "metadata" : [ {
+        "message" : {
+          "de" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Deine bevorzugte assistive Technology ist auf diesem Gerät nicht verfügbar. Wir habe diese alternaive Lösung für dich gestartet."
+          },
+          "en" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Your preferred Assistive Technology is not available on the device. We have launched this alternative solution for you."
+          },
+          "gr" : {
+            "learnMore" : "todo Sollution URI",
+            "message" : "Η εφαρμογή υποστηρικτικής τεχνολογίας που προτιμάτε δεν είναι διαθέσιμη. Επιλέξαμε για εσάς μια εναλλακτική εφαρμογή."
+          }
+        },
+        "scope" : [ "com.android.talkback" ],
+        "type" : "helpMessage"
+      } ]
+    }
+  }
+}

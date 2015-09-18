@@ -1,0 +1,14 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "org.gnome.desktop.interface" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/common/highContrastEnabled" : true
+          }
+        }
+      }
+    }
+  }
+}

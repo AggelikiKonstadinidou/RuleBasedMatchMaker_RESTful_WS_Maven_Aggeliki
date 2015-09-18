@@ -1,0 +1,54 @@
+@prefix c4a: <http://rbmm.org/schemas/cloud4all/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+	//find if the services to be called are more than one
+	//so we have a combined service scenario
+	[FindCombinedServices:
+	(?configA rdf:type c4a:Configuration)
+	(?configA c4a:refersTo ?ssynth)
+	(?configA c4a:refersTo ?pref)
+	(?configA c4a:id "http://registry.gpii.net/applications/com.certh.service-synthesis")
+	(?configA c4a:name "com.certh.service-synthesis")
+	(?configA c4a:isActive "true")
+	(?configA c4a:settings ?serviceSettingA)
+	(?serviceSettingA rdf:type c4a:ServiceSetting)
+	(?serviceSettingA c4a:serviceName ?s_idA)
+	
+	(?configB rdf:type c4a:Configuration)
+	(?configB c4a:refersTo ?ssynth)
+	(?configB c4a:refersTo ?pref)
+	(?configB c4a:id "http://registry.gpii.net/applications/com.certh.service-synthesis")
+	(?configB c4a:name "com.certh.service-synthesis")
+	(?configB c4a:isActive "true")
+	(?configB c4a:settings ?serviceSettingB)
+	(?serviceSettingB rdf:type c4a:ServiceSetting)
+	(?serviceSettingB c4a:serviceName ?s_idB)
+	(?serviceSettingA c4a:type "single")
+	(?serviceSettingB c4a:type "single")
+	
+	notEqual(?s_idA,?s_idB)
+	->
+	drop(18,19)
+	(?serviceSettingA c4a:type "combined")
+	(?serviceSettingB c4a:type "combined")
+	]
+	
+	//give low priority to the webanywhere service and high to the others
+	//because webanywhere has to be the final service that will be called
+	[FindCombinedServices:
+	(?config rdf:type c4a:Configuration)
+	(?config c4a:refersTo ?ssynth)
+	(?config c4a:refersTo ?pref)
+	(?config c4a:id "http://registry.gpii.net/applications/com.certh.service-synthesis")
+	(?config c4a:name "com.certh.service-synthesis")
+	(?config c4a:isActive "true")
+	(?config c4a:settings ?serviceSettingA)
+	(?serviceSetting rdf:type c4a:ServiceSetting)
+	(?serviceSetting c4a:serviceName ?s_id)
+	(?serviceSetting c4a:priority "1")
+	 equal(?s_id,"CallWebAnywhere")
+	->
+	drop(9)
+	(?serviceSetting c4a:priority "0")
+	]
+	

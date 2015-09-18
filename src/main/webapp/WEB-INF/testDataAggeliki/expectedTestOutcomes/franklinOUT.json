@@ -1,0 +1,22 @@
+{
+  "inferredConfiguration" : {
+    "gpii-default" : {
+      "applications" : {
+        "com.texthelp.readWriteGold" : {
+          "active" : true,
+          "settings" : {
+            "http://registry.gpii.net/applications/com.texthelp.readWriteGold" : {
+              "ApplicationSettings.AppBar.LargeIcons.$t" : true,
+              "ApplicationSettings.AppBar.ShowText.$t" : true,
+              "ApplicationSettings.AppBar.Width.$t" : 1072.0,
+              "ApplicationSettings.AppBar.optToolbarLargeIcons.$t" : true,
+              "ApplicationSettings.AppBar.optToolbarShowText.$t" : true,
+              "ApplicationSettings.Speech.optAutoUseScreenReading.$t" : false,
+              "ApplicationSettings.Speech.optSAPI5Speed.$t" : 50.0
+            }
+          }
+        }
+      }
+    }
+  }
+}
