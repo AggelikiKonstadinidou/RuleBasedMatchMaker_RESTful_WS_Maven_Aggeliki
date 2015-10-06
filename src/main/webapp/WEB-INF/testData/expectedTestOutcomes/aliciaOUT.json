@@ -7,7 +7,7 @@
           "settings" : {
             "http://registry.gpii.net/applications/com.certh.service-synthesis" : {
               "serviceInput" : {
-                "originalURL" : "URL_TO_BE_REPLACED",
+                "inputUrl" : "URL_TO_BE_REPLACED",
                 "targetLanguage" : "en"
               },
               "serviceName" : "Translatewebpage"

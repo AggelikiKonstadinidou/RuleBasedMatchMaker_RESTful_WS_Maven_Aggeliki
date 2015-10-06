@@ -4,7 +4,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
-        {
+	{
             "@id": "http://registry.gpii.net/applications/com.certh.service-synthesis",
             "@type": "c4a:Solution",
             "c4a:id": "com.certh.service-synthesis",
@@ -12,22 +12,450 @@
             "c4a:service": [
                 {
                     "@type": "c4a:Service",
-                    "c4a:id": "Translatewebpage",
-                    "c4a:name": "Web page translation",
+                    "c4a:id": "TextToSpeech",
+                    "c4a:name": "Service_TextToSpeech",
                     "c4a:settings": [
                         {
                             "@type": "c4a:Setting",
                             "c4a:default": true,
-                            "c4a:name": "originalURL",                            
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TextToSpeech/textToSpeak",
+                            "c4a:name": "textToSpeak",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TextToSpeech/spokenTextMp3URL",
+                            "c4a:name": "spokenTextMp3URL",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "Translatewebpage",
+                    "c4a:name": "Service_TranslateWebPage",
+					"c4a:priority": 2,
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Translatewebpage/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Translatewebpage/targetLanguage",
+                            "c4a:isExactMatching": true,
                             "c4a:name": "targetLanguage",
-                    		"c4a:refersTo": "http://registry.gpii.net/common/language"
+                            "c4a:refersTo": "http://registry.gpii.net/common/language",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Translatewebpage/finalUrl",
+                            "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Translatewebpage/targetLanguageCode",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "targetLanguageCode",
+                            "c4a:refersTo": "http://registry.gpii.net/common/language",
+                            "c4a:type": "output"
                         }
                     ]
-                }            
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "FontConverter",
+                    "c4a:name": "Service_FontConverter",
+					"c4a:priority": 3,
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/targetFontSize",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "targetFontSize",
+                            "c4a:refersTo": "http://registry.gpii.net/common/fontSize",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/targetColor",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "targetColor",
+                            "c4a:refersTo": "http://registry.gpii.net/common/foregroundColour",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/targetBackground",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "targetBackground",
+                            "c4a:refersTo": "http://registry.gpii.net/common/backgroundColour",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/targetFontFamily",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "targetFontFamily",
+                            "c4a:refersTo": "http://registry.gpii.net/common/fontFamily",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/FontConverter/finalUrl",
+                            "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "URLScreenshotGenerator",
+                    "c4a:name": "Service_URLScreenshotGenerator",
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/URLScreenshotGenerator/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/URLScreenshotGenerator/screenshot",
+                            "c4a:name": "screenshot",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/URLScreenshotGenerator/message",
+                            "c4a:name": "message",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "Identifyimageswithoutaltattributeinwebpage",
+                    "c4a:name": "Service_IdentifyImagesWithoutAltAttributeInWebPage",
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Identifyimageswithoutaltattributeinwebpage/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/Identifyimageswithoutaltattributeinwebpage/finalUrl",
+                            "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "CaptchaResolver",
+                    "c4a:name": "Service_CaptchaResolver",
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CaptchaResolver/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CaptchaResolver/api-message",
+                            "c4a:name": "api-message",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CaptchaResolver/captcha",
+                            "c4a:name": "captcha",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "CallWebAnywhere",
+                    "c4a:name": "Service_WebAnyWhere",
+					"c4a:priority": 1,
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/inputUrl",
+                            "c4a:name": "inputUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/voiceLanguage",
+                            "c4a:isExactMatching": true,
+                            "c4a:name": "voiceLanguage",
+                            "c4a:refersTo": "http://registry.gpii.net/common/language",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/finalUrl",
+                            "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "StaticImageMap",
+                    "c4a:name": "Service_StaticImageMap",
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/latitude",
+                            "c4a:name": "latitude",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/longitude",
+                            "c4a:name": "longitude",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/supported",
+                            "c4a:name": "supported",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/success",
+                            "c4a:name": "success",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/termsOfUseUrl",
+                            "c4a:name": "termsOfUseUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/rateLimitUrl",
+                            "c4a:name": "rateLimitUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/imageUrl",
+                            "c4a:name": "imageUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/providerUrl",
+                            "c4a:name": "providerUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/StaticImageMap/html",
+                            "c4a:name": "html",
+                            "c4a:type": "output"
+                        }
+                    ]
+                },
+                {
+                    "@type": "c4a:Service",
+                    "c4a:id": "TelizeGeolocation",
+                    "c4a:name": "Service_TelizeGeolocation",
+                    "c4a:settings": [
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:default": true,
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/ipAddress",
+                            "c4a:name": "ipAddress",
+                            "c4a:type": "input"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/country",
+                            "c4a:name": "country",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/isp",
+                            "c4a:name": "isp",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/countryCode",
+                            "c4a:name": "countryCode",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/dmaCode",
+                            "c4a:name": "dmaCode",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/timezone",
+                            "c4a:name": "timezone",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/area_code",
+                            "c4a:name": "area_code",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/region",
+                            "c4a:name": "region",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/city",
+                            "c4a:name": "city",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/longitude",
+                            "c4a:name": "longitude",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/ip",
+                            "c4a:name": "ip",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/latitude",
+                            "c4a:name": "latitude",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/asn",
+                            "c4a:name": "asn",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/continent_code",
+                            "c4a:name": "continent_code",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/region_code",
+                            "c4a:name": "region_code",
+                            "c4a:type": "output"
+                        },
+                        {
+                            "@type": "c4a:Setting",
+                            "c4a:hasValueSpace": "string",
+                            "c4a:id": "http://registry.gpii.net/application/TelizeGeolocation/countryCode3",
+                            "c4a:name": "countryCode3",
+                            "c4a:type": "output"
+                        }
+                    ]
+                }
             ]
         },
         {

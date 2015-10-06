@@ -13,12 +13,15 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.apache.tools.ant.types.CommandlineJava.SysProperties;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -391,13 +394,18 @@ public class TransformerManager {
 											+ tmpSetting.hasID);
 
 						if (tmpSetting.hasName.equals("") == false) {
-							if (!tmpSetting.hasName.contains("url"))
+							if (!tmpSetting.hasName.contains("Url"))
 								tmpSolSettingJsonObj.put(C4A_NS + "name",
 										tmpSetting.hasName);
 
-							else
+							else if (tmpSetting.hasName.contains("Url")
+									&& tmpSetting.hasCommentsForMapping
+											.equals("input"))
 								tmpSolSettingJsonObj.put(C4A_NS + "name",
 										"originalURL");
+							else
+								tmpSolSettingJsonObj.put(C4A_NS + "name",
+										tmpSetting.hasName);
 						} else
 							tmpSolSettingJsonObj.put(C4A_NS + "name",
 									tmpSetting.instanceName);
@@ -433,13 +441,17 @@ public class TransformerManager {
 							tmpSolSettingJsonObj.put(C4A_NS
 									+ "type",
 									tmpSetting.hasCommentsForMapping);
+						
+						if (tmpSetting.hasName.contains("Url"))
+							tmpSolSettingJsonObj.put(C4A_NS + "refersTo",
+									"http://registry.gpii.net/common/URL");
 
 						if (tmpSetting.isMappedToRegTerm.equals("")
 								&& tmpSetting.hasCommentsForMapping
 										.equals("input")) {
 							tmpSolSettingJsonObj.put(C4A_NS + "default", true);
 
-							if (tmpSetting.hasName.contains("url"))
+							if (tmpSetting.hasName.contains("Url"))
 								tmpSolSettingJsonObj.put(C4A_NS + "value",
 										"URL_TO_BE_REPLACED");
 						}
@@ -868,6 +880,7 @@ public class TransformerManager {
 		settingsInner.put("serviceInput", combinedInput);
 
 		// pre-process for screenReaders
+	// TODO test screenReaderEnabled = false;
 		int pos = -1;
 		for (String s : serviceNames) {
 			if (s.equalsIgnoreCase("CallWebAnywhere") && screenReaderEnabled) {
@@ -887,11 +900,13 @@ public class TransformerManager {
 		for (QuerySolution temp : allServicesClone) {
 			if (temp.contains("?serviceName"))
 				name = temp.get("?serviceName").toString();
+			
 			if (name.equalsIgnoreCase("CallWebAnywhere") && screenReaderEnabled) {
 				allServices.remove(temp);
 			}
 
 		}
+		
 
 		// create json objects for all services to add the services
 		for (String s : serviceNames) {
@@ -899,6 +914,8 @@ public class TransformerManager {
 			el = new Element(s, serviceInput);
 			objectServices.add(el);
 		}
+		
+	//	System.out.println("screenReaderEnabled "+screenReaderEnabled);
 
 		// add the properties
 		for (QuerySolution temp : allServices) {
@@ -920,55 +937,114 @@ public class TransformerManager {
 			if (temp.contains("?propValue"))
 				propValue = temp.get("?propValue").toString();
 			position = -1;
+			
+			if(appActive)
+				if (propName.equals(toVariableName)) {
 
-			if (appActive && !toServiceName.equals(name)
-					&& !toVariableName.equals(propName)) {
+					if ((screenReaderEnabled
+							&& !toServiceName
+									.equalsIgnoreCase("CallWebAnywhere") && !fromServiceName
+								.equals("CallWebAnywhere"))
+							|| !screenReaderEnabled) {
+						// create the mapping
+						innerMapping = new JSONObject();
+						innerMapping.put("fromServiceName", fromServiceName);
+						innerMapping.put("fromVariableName", fromVariableName);
+						innerMapping.put("toServiceName", toServiceName);
 
-				tempObj = new JSONObject();
-				// find the object to add the properties using the position
-				for (int i = 0; i < objectServices.size(); i++) {
-					if (objectServices.get(i).getName().equals(name)) {
-						tempObj = objectServices.get(i).getServiceInput();
-						position = i;
-						break;
+						if (toVariableName.equalsIgnoreCase("originalURL"))
+							toVariableName = "inputUrl";
+
+						innerMapping.put("toVariableName", toVariableName);
+						// add the mapping to block of mapping objects
+						// check if the mapping was already added to the
+						// array
+						boolean added = false;
+						for (int i = 0; i < mappedVariables.length(); i++) {
+							tempMapping = mappedVariables.getJSONObject(i);
+							if (tempMapping.toString().equals(
+									innerMapping.toString())) {
+								added = true;
+								break;
+							}
+
+						}
+						if (!added)
+							mappedVariables.put(innerMapping);
 					}
-				}
 
-				tempObj.put(propName, propValue);
-				objectServices.remove(position);
-				objectServices.add(position, new Element(name, tempObj));
+				} else {
 
-			} else if (!fromServiceName.equals(name)) {
-
-				// create the mapping
-				innerMapping = new JSONObject();
-				innerMapping.put("fromServiceName", fromServiceName);
-				innerMapping.put("fromVariableName", fromVariableName);
-				innerMapping.put("toServiceName", toServiceName);
-				innerMapping.put("toVariableName", toVariableName);
-				// add the mapping to block of mapping objects
-				// check if the mapping was already added to the array
-				boolean added = false;
-				for (int i = 0; i < mappedVariables.length(); i++) {
-					tempMapping = mappedVariables.getJSONObject(i);
-					if (tempMapping.toString().equals(innerMapping.toString())) {
-						added = true;
-						break;
+					tempObj = new JSONObject();
+					// find the object to add the properties using the position
+					for (int i = 0; i < objectServices.size(); i++) {
+						if (objectServices.get(i).getName().equals(name)) {
+							tempObj = objectServices.get(i).getServiceInput();
+							position = i;
+							break;
+						}
 					}
 
+					tempObj.put(propName, propValue);
+					objectServices.remove(position);
+					objectServices.add(position, new Element(name, tempObj));
 				}
-				if (!added)
-					mappedVariables.put(innerMapping);
+		}
+		
+		//check duplicates
+		for (QuerySolution temp : allServices) {
+
+			if (temp.contains("?toServiceName"))
+				toServiceName = temp.get("?toServiceName").toString();
+			if (temp.contains("?propName"))
+				propName = temp.get("?propName").toString();
+			if (temp.contains("?serviceName"))
+				name = temp.get("?serviceName").toString();
+
+			String s1 = "\"toServiceName\":" + "\"" + name + "\"";
+			String s2 = "\"toVariableName\":" + "\"" + propName + "\"";
+
+			for (int i = 0; i < objectServices.size(); i++) {
+				if (objectServices.get(i).getName().equals(name)) {
+					tempObj = objectServices.get(i).getServiceInput();
+					position = i;
+					break;
+				}
+			}
+
+			boolean tempFlag = false;
+			for (int i = 0; i < mappedVariables.length(); i++) {
+				tempMapping = mappedVariables.getJSONObject(i);
+
+				if (tempMapping.toString().contains(s1)
+						&& tempMapping.toString().contains(s2)) {
+
+					tempFlag = true;
+					break;
+				}
 
 			}
+
+			if (tempFlag) {
+
+				Element test = objectServices.get(position);
+				if (test.getServiceInput().has(propName))
+					test.getServiceInput().remove(propName);
+
+				objectServices.remove(position);
+				objectServices.add(position,
+						new Element(name, test.getServiceInput()));
+			}
+
 		}
+		
 
 		// complete the jsonobjects
 		for (Element tempEl : objectServices) {
 			innerService = new JSONObject();
 			innerService.put("serviceName", tempEl.getName());
 			if (!tempEl.getServiceInput().toString().equals("{}"))
-				innerService.put("servieInput", tempEl.getServiceInput());
+				innerService.put("serviceInput", tempEl.getServiceInput());
 			input.put(innerService);
 		}
 		combinedInput.put("input", input);
@@ -1055,7 +1131,7 @@ public class TransformerManager {
 						if (queryType.equals(defaultNameSpace
 								+ "ServiceSetting")) {
 
-							System.out.println("soln: " + soln);
+						//	System.out.println("soln: " + soln);
 
 							boolean isActive = Boolean.valueOf(soln.get(
 									"?appActive").toString());
@@ -1164,12 +1240,13 @@ public class TransformerManager {
 							String setName = soln.get("?setName").toString();
 							Object setValue = soln.get("?setValue");
 							
+							
+							//check if screenReaderTTSEnabled is true
 							if (setId.contains("screenReaderTTSEnabled")
 									&& Boolean.valueOf(setValue.toString())
 									&& Boolean.valueOf(soln.get("?appActive")
 											.toString())) {
 								screenReaderEnabled = true;
-								System.out.println("screenReader enabled!!!");
 							}
 
 							// Transform value data types

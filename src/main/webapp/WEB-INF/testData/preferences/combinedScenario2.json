@@ -6,12 +6,18 @@
                 "preferences": {
                     "http://registry.gpii.net/common/screenReaderTTSEnabled": true,
                     "http://registry.gpii.net/common/speechRate": 350,
-                    "http://registry.gpii.net/common/volumeTTS": 0.6,
+                    "http://registry.gpii.net/common/volume": 0.6,
                     "http://registry.gpii.net/common/highContrastEnabled": true,
                     "http://registry.gpii.net/common/highContrastTheme": "white-black",
                     "http://registry.gpii.net/common/auditoryOutLanguage": "en",
-                    "http://registry.gpii.net/common/language": "en",
-                    "http://registry.gpii.net/common/screenResolution": "low",
+					"http://registry.gpii.net/common/language": "en",
+					"http://registry.gpii.net/common/foregroundColour": "red",
+					"http://registry.gpii.net/common/backgroundColour": "blue",
+					"http://registry.gpii.net/common/fontSize": "18",
+					"http://registry.gpii.net/common/fontFamily": "Arial",
+                    "http://registry.gpii.net/applications/com.microsoft.windows.displaySettings": {
+                        "isActive": true
+                    },
                     "http://registry.gpii.net/common/matchMakerType": "RuleBased"
                 }
             }
@@ -24,32 +30,20 @@
         },
         "solutions": [
             {
-                "id": "org.gnome.desktop.interface"
+                "id": "com.microsoft.windows.onscreenKeyboard"
             },
             {
-                "id": "org.gnome.shell.overrides"
+                "id": "com.microsoft.windows.magnifier"
             },
             {
-                "id": "org.gnome.desktop.wm.preferences"
+                "id": "com.microsoft.windows.displaySettings"
             },
             {
-                "id": "org.gnome.nautilus"
-            },
-            {
-                "id": "org.gnome.desktop.a11y.keyboard"
-            },
-            {
-                "id": "org.gnome.desktop.a11y.applications.onscreen-keyboard"
-            },
-            {
-                "id": "org.gnome.orca"
-            },
-            {
-                "id": "org.gnome.desktop.a11y.magnifier"
+                "id": "com.microsoft.windows.highContrast"
             },
             {
                 "id": "com.certh.service-synthesis"
-            }			
+            }
         ]
     },
     "environmentReporter": {},

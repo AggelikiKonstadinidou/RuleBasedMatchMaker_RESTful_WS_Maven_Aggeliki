@@ -20,7 +20,9 @@ public class RBMM_WebServiceIT extends TestCase
         {
 		
 			// review 4
-			_Alicia();			
+			_Alicia();	
+			_CombinedScenario1();
+			_CombinedScenario2();
 
         }
         else
@@ -372,6 +374,43 @@ public class RBMM_WebServiceIT extends TestCase
 	    
 	    performTest(filepathIN, filepathExpectedOUT1, "_Alicia");           
     }
+	
+	private void _CombinedScenario1()
+    {
+	    System.out.println("\n*****************************************************");
+	    System.out.println("* Testing 'CombinedScenario1' *************************************");
+	    System.out.println("*******************************************************");    	
+	
+	    String filepathIN = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/preferences/combinedScenario1.json";
+	    String filepathExpectedOUT1 = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/expectedTestOutcomes/combinedScenarioOUT1.json";
+	    
+	    performTest(filepathIN, filepathExpectedOUT1, "_Alicia");           
+    }
+	
+	private void _CombinedScenario2()
+    {
+	    System.out.println("\n*****************************************************");
+	    System.out.println("* Testing 'CombinedScenario2' *************************************");
+	    System.out.println("*******************************************************");    	
+	
+	    String filepathIN = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/preferences/combinedScenario2.json";
+	    String filepathExpectedOUT1 = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/expectedTestOutcomes/combinedScenarioOUT2.json";
+	    
+	    performTest(filepathIN, filepathExpectedOUT1, "_Alicia");           
+    }
+	
+	// Review 4    
+		private void _Alicia2()
+	    {
+		    System.out.println("\n*****************************************************");
+		    System.out.println("* Testing 'Alica' *************************************");
+		    System.out.println("*******************************************************");    	
+		
+		    String filepathIN = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/preferences/alicia2.json";
+		    String filepathExpectedOUT1 = System.getProperty("user.dir") + "/src/main/webapp/WEB-INF/testData/expectedTestOutcomes/aliciaOUT2.json";
+		    
+		    performTest(filepathIN, filepathExpectedOUT1, "_Alicia");           
+	    }
 
     public void test_transformOwlToJSONLD() 
     {

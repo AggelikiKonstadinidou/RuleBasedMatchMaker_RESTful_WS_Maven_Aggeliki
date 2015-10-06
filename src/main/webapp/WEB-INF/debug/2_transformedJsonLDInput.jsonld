@@ -24,10 +24,37 @@
       }
     }, {
       "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/foregroundColour",
+      "c4a:name" : "foregroundColour",
+      "c4a:type" : "common",
+      "c4a:value" : "red"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/fontFamily",
+      "c4a:name" : "fontFamily",
+      "c4a:type" : "common",
+      "c4a:value" : "Arial"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/fontSize",
+      "c4a:name" : "fontSize",
+      "c4a:type" : "common",
+      "c4a:value" : {
+        "@type" : "xsd:float",
+        "@value" : "18.0"
+      }
+    }, {
+      "@type" : "c4a:Preference",
       "c4a:id" : "http://registry.gpii.net/common/matchMakerType",
       "c4a:name" : "matchMakerType",
       "c4a:type" : "common",
       "c4a:value" : "RuleBased"
+    }, {
+      "@type" : "c4a:Preference",
+      "c4a:id" : "http://registry.gpii.net/common/backgroundColour",
+      "c4a:name" : "backgroundColour",
+      "c4a:type" : "common",
+      "c4a:value" : "blue"
     }, {
       "@type" : "c4a:Preference",
       "c4a:id" : "http://registry.gpii.net/common/volume",
@@ -93,18 +120,6 @@
     "@id" : "http://registry.gpii.net/applications/com.microsoft.windows.highContrast",
     "@type" : "c4a:InstalledSolution",
     "name" : "com.microsoft.windows.highContrast"
-  }, {
-    "@id" : "http://registry.gpii.net/applications/com.yourdolphin.supernova-as",
-    "@type" : "c4a:InstalledSolution",
-    "name" : "com.yourdolphin.supernova-as"
-  }, {
-    "@id" : "http://registry.gpii.net/applications/com.texthelp.readWriteGold",
-    "@type" : "c4a:InstalledSolution",
-    "name" : "com.texthelp.readWriteGold"
-  }, {
-    "@id" : "http://registry.gpii.net/applications/org.chrome.cloud4chrome",
-    "@type" : "c4a:InstalledSolution",
-    "name" : "org.chrome.cloud4chrome"
   }, {
     "@id" : "http://registry.gpii.net/applications/com.certh.service-synthesis",
     "@type" : "c4a:InstalledSolution",

@@ -23003,8 +23003,10 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Translatewebpage/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
@@ -23020,6 +23022,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Translatewebpage/finalUrl",
                             "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         },
                         {
@@ -23079,14 +23082,17 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/FontConverter/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/FontConverter/finalUrl",
                             "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         }
                     ]
@@ -23101,8 +23107,10 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/URLScreenshotGenerator/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
@@ -23130,14 +23138,17 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Identifyimageswithoutaltattributeinwebpage/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Identifyimageswithoutaltattributeinwebpage/finalUrl",
                             "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         }
                     ]
@@ -23152,8 +23163,10 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/CaptchaResolver/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
@@ -23181,8 +23194,10 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/inputUrl",
-                            "c4a:name": "inputUrl",
-                            "c4a:type": "input"
+                            "c4a:name": "originalURL",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
+                            "c4a:type": "input",
+                            "c4a:value": "URL_TO_BE_REPLACED"
                         },
                         {
                             "@type": "c4a:Setting",
@@ -23198,6 +23213,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/finalUrl",
                             "c4a:name": "finalUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         }
                     ]
@@ -23242,6 +23258,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/StaticImageMap/termsOfUseUrl",
                             "c4a:name": "termsOfUseUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         },
                         {
@@ -23249,6 +23266,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/StaticImageMap/rateLimitUrl",
                             "c4a:name": "rateLimitUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         },
                         {
@@ -23256,6 +23274,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/StaticImageMap/imageUrl",
                             "c4a:name": "imageUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         },
                         {
@@ -23263,6 +23282,7 @@
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/StaticImageMap/providerUrl",
                             "c4a:name": "providerUrl",
+                            "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "output"
                         },
                         {
