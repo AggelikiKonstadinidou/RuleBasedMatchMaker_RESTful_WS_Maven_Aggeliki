@@ -22997,13 +22997,14 @@
                     "@type": "c4a:Service",
                     "c4a:id": "Translatewebpage",
                     "c4a:name": "Service_TranslateWebPage",
+                    "c4a:priority": 2,
                     "c4a:settings": [
                         {
                             "@type": "c4a:Setting",
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Translatewebpage/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
@@ -23040,6 +23041,7 @@
                     "@type": "c4a:Service",
                     "c4a:id": "FontConverter",
                     "c4a:name": "Service_FontConverter",
+                    "c4a:priority": 3,
                     "c4a:settings": [
                         {
                             "@type": "c4a:Setting",
@@ -23082,7 +23084,7 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/FontConverter/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
@@ -23107,7 +23109,7 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/URLScreenshotGenerator/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
@@ -23138,7 +23140,7 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/Identifyimageswithoutaltattributeinwebpage/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
@@ -23163,7 +23165,7 @@
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/CaptchaResolver/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"
@@ -23188,13 +23190,14 @@
                     "@type": "c4a:Service",
                     "c4a:id": "CallWebAnywhere",
                     "c4a:name": "Service_WebAnyWhere",
+                    "c4a:priority": 1,
                     "c4a:settings": [
                         {
                             "@type": "c4a:Setting",
                             "c4a:default": true,
                             "c4a:hasValueSpace": "string",
                             "c4a:id": "http://registry.gpii.net/application/CallWebAnywhere/inputUrl",
-                            "c4a:name": "originalURL",
+                            "c4a:name": "inputUrl",
                             "c4a:refersTo": "http://registry.gpii.net/common/URL",
                             "c4a:type": "input",
                             "c4a:value": "URL_TO_BE_REPLACED"

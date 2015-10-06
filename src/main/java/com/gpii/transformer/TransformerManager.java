@@ -375,6 +375,17 @@ public class TransformerManager {
 				tmObj.put("@type", C4A_NS + "Service");
 				tmObj.put(C4A_NS + "id", tmpSolution.id);
 				tmObj.put(C4A_NS + "name", tmpSolution.name);
+				int serviceOrderOfExecution = -1;
+				if(tmpSolution.id.equalsIgnoreCase("FontConverter"))
+					serviceOrderOfExecution = 3;
+				else if(tmpSolution.id.equalsIgnoreCase("Translatewebpage"))
+					serviceOrderOfExecution = 2;
+				else if(tmpSolution.id.equalsIgnoreCase("Callwebanywhere"))
+					serviceOrderOfExecution = 1;
+				
+				if(serviceOrderOfExecution!=-1)
+					tmObj.put(C4A_NS + "priority", serviceOrderOfExecution);
+				
 
 				// settings
 				JSONArray tmpSolSettingsJsonArray = new JSONArray();
@@ -402,7 +413,7 @@ public class TransformerManager {
 									&& tmpSetting.hasCommentsForMapping
 											.equals("input"))
 								tmpSolSettingJsonObj.put(C4A_NS + "name",
-										"originalURL");
+										"inputUrl");
 							else
 								tmpSolSettingJsonObj.put(C4A_NS + "name",
 										tmpSetting.hasName);
