@@ -915,7 +915,7 @@ public class TransformerManager {
 			objectServices.add(el);
 		}
 		
-	//	System.out.println("screenReaderEnabled "+screenReaderEnabled);
+		System.out.println("screenReaderEnabled "+screenReaderEnabled);
 
 		// add the properties
 		for (QuerySolution temp : allServices) {
@@ -1241,7 +1241,7 @@ public class TransformerManager {
 							Object setValue = soln.get("?setValue");
 							
 							
-							//check if screenReaderTTSEnabled is true
+							//check if screenReaderTTSEnabled is t
 							if (setId.contains("screenReaderTTSEnabled")
 									&& Boolean.valueOf(setValue.toString())
 									&& Boolean.valueOf(soln.get("?appActive")
